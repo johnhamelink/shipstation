@@ -34,7 +34,7 @@ defmodule Shipstation do
     case Poison.decode(resp.body) do
       {:ok, body} ->
         {:ok, %{Map.from_struct(resp) | body: body}}
-      {:error, err} ->
+      {:error, _err} ->
         Logger.error("Could not parse JSON: #{resp.body}")
         {:error, "Could not parse JSON: #{resp.body}"}
     end
