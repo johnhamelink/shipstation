@@ -1,6 +1,19 @@
 # Shipstation
 
-**TODO: Add description**
+[![Ebert](https://ebertapp.io/github/johnhamelink/shipstation.svg)](https://ebertapp.io/github/johnhamelink/shipstation)
+[![Travis](https://img.shields.io/travis/johnhamelink/shipstation.svg)]()
+[![Hex.pm](https://img.shields.io/hexpm/johnhamelink/shipstation.svg)]()
+[![Libraries.io for releases](https://img.shields.io/librariesio/release/johnhamelink/shipstation/1.0.3.svg)]()
+
+---
+
+An API client library for [Shipstation](https://shipstation.com).
+
+### Todo (PRs welcome):
+
+ - [ ] Finish building out API
+ - [ ] Create Model structs for each expected output
+ - [ ] Handle throttling and respect exponential backoff
 
 ## Installation
 
