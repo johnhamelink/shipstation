@@ -13,7 +13,7 @@ defmodule Shipstation.CarrierTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert (Kernel.get_in(body, [all, "accountNumber"]) |> Enum.sort) == [
+      assert Enum.sort(Kernel.get_in(body, [all, "accountNumber"])) == [
         "297929999", "913999", "ABCR80", "SS123", "fe71c33f"]
     end
   end
@@ -52,7 +52,7 @@ defmodule Shipstation.CarrierTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert (Kernel.get_in(body, [all, "name"]) |> Enum.sort) == [
+      assert Enum.sort(Kernel.get_in(body, [all, "name"])) == [
         "Cubic", "DVD Flat Rate Box", "Flat Rate Envelope",
         "Flat Rate Legal Envelope", "Flat Rate Padded Envelope",
         "Large Envelope or Flat", "Large Flat Rate Box",
@@ -69,7 +69,7 @@ defmodule Shipstation.CarrierTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert (Kernel.get_in(body, [all, "code"]) |> Enum.sort) == [
+      assert Enum.sort(Kernel.get_in(body, [all, "code"])) == [
         "fedex_1_day_freight", "fedex_2_day_freight", "fedex_2day",
         "fedex_2day_am", "fedex_3_day_freight", "fedex_europe_first",
         "fedex_express_saver", "fedex_first_overnight",

@@ -44,7 +44,6 @@ defmodule Shipstation.Order do
     Shipstation.call_api(:post, uri, %{orderIds: order_ids, userId: user_id})
   end
 
-
   @doc ~s"""
   Creates a shipping label for a given order.
 

@@ -49,7 +49,7 @@ defmodule Shipstation.OrderTest do
   test "Create a label for an order" do
     use_cassette "create_label_for_order" do
       params = %Shipstation.Structs.Order{
-        orderId: 93348442,
+        orderId: 93_348_442,
         carrierCode: "fedex",
         serviceCode: "fedex_2day",
         packageCode: "package",
@@ -66,7 +66,7 @@ defmodule Shipstation.OrderTest do
       {:ok, %{body: body}} = resp = Shipstation.Order.create_label(params)
 
       assert {:ok, %{status_code: 200}} = resp
-      assert get_in(body, ["shipmentId"]) == 72513480
+      assert get_in(body, ["shipmentId"]) == 72_513_480
     end
   end
 

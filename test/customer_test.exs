@@ -9,11 +9,11 @@ defmodule Shipstation.CustomerTest do
 
   test "Get Customer" do
     use_cassette "customer_get" do
-      {:ok, %{body: body}} = resp = Shipstation.Customer.get(12345678)
+      {:ok, %{body: body}} = resp = Shipstation.Customer.get(12_345_678)
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert get_in(body, ["marketplaceUsernames", all, "username"]) |> Enum.sort == [
+      assert Enum.sort(get_in(body, ["marketplaceUsernames", all, "username"])) == [
         "camtheman@gmail.com",
         "camtheman@gmail.com",
         "supercam@example.com"]
@@ -36,7 +36,7 @@ defmodule Shipstation.CustomerTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert get_in(body, ["customers", all, "email"]) |> Enum.sort == [
+      assert Enum.sort(get_in(body, ["customers", all, "email"])) == [
         "boknows@example.com", "supermancam@example.com"]
     end
   end

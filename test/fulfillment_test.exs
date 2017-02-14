@@ -13,7 +13,7 @@ defmodule Shipstation.FulfillmentTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert get_in(body, ["fulfillments", all, "fulfillmentId"]) |> Enum.sort == [246310, 33974374]
+      assert Enum.sort(get_in(body, ["fulfillments", all, "fulfillmentId"])) == [246_310, 33_974_374]
     end
   end
 
@@ -27,7 +27,7 @@ defmodule Shipstation.FulfillmentTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert get_in(body, ["fulfillments", all, "fulfillmentId"]) |> Enum.sort == [246310, 33974374]
+      assert Enum.sort(get_in(body, ["fulfillments", all, "fulfillmentId"])) == [246_310, 33_974_374]
     end
   end
 
