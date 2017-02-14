@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"trackingNumber\":\"913492493294329421\",\"shipDate\":\"2014-04-01\",\"orderId\":93348442,\"notifySalesChannel\":true,\"notifyCustomer\":true,\"carrierCode\":\"usps\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/markasshipped"
+    },
+    "response": {
+      "body": "{\n    \"orderId\": 123456789,\n    \"orderNumber\": \"ABC123\"\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a395f7eb5c751900c05c40",
+        "Content-Length": "57",
+        "Date": "Tue, 14 Feb 2017 23:42:47 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

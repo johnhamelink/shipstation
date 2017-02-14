@@ -136,6 +136,14 @@ defmodule Shipstation.OrderTest do
     end
   end
 
+  test "Remove a tag from an order" do
+    use_cassette "remove_tag_from_order" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.remove_tag(123_456, 1234)
+      assert {:ok, %{status_code: 200}} = resp
+      assert body == %{"success" => true, "message" => "Tag removed successfully."}
+    end
+  end
+
   test "Assign a user to an order" do
     use_cassette "assign_user_to_order" do
       {:ok, %{body: body}} = resp = Shipstation.Order.assign_user(
@@ -143,6 +151,16 @@ defmodule Shipstation.OrderTest do
 
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"success" => true, "message" => "User assigned successfully."}
+    end
+  end
+
+  test "Unassign a user to an order" do
+    use_cassette "unassign_user_to_order" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.unassign_user(
+        [123_456_789, 12_345_679])
+
+      assert {:ok, %{status_code: 200}} = resp
+      assert body == %{"success" => true, "message" => "User unassigned successfully."}
     end
   end
 
@@ -209,6 +227,89 @@ defmodule Shipstation.OrderTest do
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["hasErrors"]) == false
       assert body["results"] |> List.first |> Map.fetch!("orderKey") == "0f6bec18-3e89-4881-83aa-f392d84f4c74"
+    end
+  end
+
+  test "Set an 'order hold until' date" do
+    use_cassette "hold_order_until" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.hold_until(1072467, "2014-12-01")
+
+      assert {:ok, %{status_code: 200}} = resp
+      assert body == %{"message" => "Order held successfully.", "success" => true}
+    end
+  end
+
+  test "Restore order from 'on hold'" do
+    use_cassette "restore_order_from_on_hold" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.restore_from_on_hold(1072467)
+
+      assert {:ok, %{status_code: 200}} = resp
+      assert body == %{"message" => "The requested order has been restored", "success" => true}
+    end
+  end
+
+  test "List orders without parameters" do
+    use_cassette "list_orders_without_parameters" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.list
+
+      all = fn :get, data, next -> Enum.map(data, next) end
+      assert {:ok, %{status_code: 200}} = resp
+      assert Enum.sort(get_in(body, ["orders", all, "customerEmail"])) == ["headhoncho@whitehouse.gov", "sholmes1854@methodsofdetection.com"]
+    end
+  end
+
+  test "List orders with parameters" do
+    use_cassette "list_orders_with_parameters" do
+      params = %Shipstation.Structs.OrderFilter{
+        customerName:    "Smith",
+        itemKeyword:     "ABC123",
+        createDateStart: "2015-01-01 00:00:00",
+        createDateEnd:   "2015-01-08 00:00:00",
+        modifyDateStart: "2015-01-01 00:00:00",
+        modifyDateEnd:   "2015-01-08 00:00:00",
+        orderDateStart:  "2015-01-01 00:00:00",
+        orderDateEnd:    "2015-01-08 00:00:00",
+        orderNumber:     12345,
+        orderStatus:     "awaiting_shipment",
+        paymentDateStart: "2015-01-01",
+        paymentDateEnd:   "2015-01-08",
+        storeId:          123456,
+        sortBy:           "OrderDate",
+        sortDir:          "ASC",
+        page:             1,
+        pageSize:         100
+      }
+      {:ok, %{body: body}} = resp = Shipstation.Order.list(params)
+
+      all = fn :get, data, next -> Enum.map(data, next) end
+      assert {:ok, %{status_code: 200}} = resp
+      assert Enum.sort(get_in(body, ["orders", all, "customerEmail"])) == ["headhoncho@whitehouse.gov", "sholmes1854@methodsofdetection.com"]
+    end
+  end
+
+  test "List orders by tag" do
+    use_cassette "list_orders_by_tag" do
+      {:ok, %{body: body}} = resp = Shipstation.Order.list_by_tag(nil, nil, 1, 100)
+      all = fn :get, data, next -> Enum.map(data, next) end
+      assert {:ok, %{status_code: 200}} = resp
+      assert Enum.sort(get_in(body, ["orders", all, "customerEmail"])) == ["headhoncho@whitehouse.gov"]
+    end
+  end
+
+  test "Mark an order as shipped" do
+    use_cassette "mark_order_as_shipped" do
+      params = %Shipstation.Structs.OrderShipped{
+        orderId: 93_348_442,
+        carrierCode: "usps",
+        shipDate: "2014-04-01",
+        trackingNumber: "913492493294329421",
+        notifyCustomer: true,
+        notifySalesChannel: true
+      }
+
+      {:ok, %{body: body}} = resp = Shipstation.Order.mark_as_shipped(params)
+      assert {:ok, %{status_code: 200}} = resp
+      assert body == %{"orderId" => 123_456_789, "orderNumber" => "ABC123"}
     end
   end
 

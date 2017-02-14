@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"orderIds\":[123456789,12345679]}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/unassignuser"
+    },
+    "response": {
+      "body": "{\n    \"success\": true,\n    \"message\": \"User unassigned successfully.\"\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a397f16ad6b219008c9758",
+        "Content-Length": "71",
+        "Date": "Tue, 14 Feb 2017 23:51:13 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
