@@ -1,4 +1,8 @@
 defmodule Shipstation.Filters.Customer do
+  @moduledoc ~s"""
+  Parameters used when filtering customers
+  """
+
   defstruct stateCode: nil,
             countryCode: nil,
             marketplaceId: nil,

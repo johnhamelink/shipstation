@@ -1,4 +1,7 @@
 defmodule Shipstation.Account do
+  @moduledoc ~s"""
+  Manage shipstation accounts
+  """
 
   defstruct "firstName": nil,
             "lastName": nil,

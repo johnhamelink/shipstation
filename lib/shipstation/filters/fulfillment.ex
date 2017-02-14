@@ -1,4 +1,7 @@
 defmodule Shipstation.Filters.Fulfillment do
+  @moduledoc ~s"""
+  Parameters used when filtering fulfillments
+  """
 
   defstruct orderId: nil,
             orderNumber: nil,

@@ -1,4 +1,7 @@
 defmodule Shipstation.Order do
+  @moduledoc ~s"""
+  Manage orders on your account.
+  """
 
   @doc ~s"""
   Retrieves a single order from the database.

@@ -1,4 +1,8 @@
 defmodule Shipstation.Structs.Order do
+  @moduledoc ~s"""
+  Parameters used when creating a label for an order
+  """
+
   defstruct orderId: nil,
             carrierCode: nil,
             serviceCode: nil,

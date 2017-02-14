@@ -1,4 +1,7 @@
 defmodule Shipstation.Fulfillment do
+  @moduledoc ~s"""
+  List fulfillments that have been logged on your account
+  """
 
   @doc ~s"""
   List fulfillments without Parameters
