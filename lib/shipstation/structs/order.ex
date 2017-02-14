@@ -1,7 +1,22 @@
 defmodule Shipstation.Structs.Order do
+  alias Shipstation.Structs.{Weight, Dimension, InsuranceOption, AdvancedOption, InternationalOption}
   @moduledoc ~s"""
   Parameters used when creating a label for an order
   """
+
+  @type t :: %Shipstation.Structs.Order{
+    orderId: integer,
+    carrierCode: String.t,
+    serviceCode: String.t,
+    packageCode: String.t,
+    confirmation: String.t,
+    shipDate: String.t,
+    weight: Weight.t,
+    dimensions: Dimension.t,
+    insuranceOptions: InsuranceOption.t,
+    advancedOptions: AdvancedOption.t,
+    testLabel: boolean
+  }
 
   defstruct orderId: nil,
             carrierCode: nil,
@@ -9,10 +24,10 @@ defmodule Shipstation.Structs.Order do
             packageCode: nil,
             confirmation: nil,
             shipDate: nil,
-            weight: %Shipstation.Structs.Weight{},
-            dimensions: nil,           # TODO: Set this to a default dimensions struct
-            insuranceOptions: nil,     # TODO: Set this to a default insuranceOptions struct
-            internationalOptions: nil, # TODO: Set this to a default internationalOptions struct
-            advancedOptions: nil,      # TODO: Set this to a default advancedOptions struct
+            weight: %Weight{},
+            dimensions: %Dimension{},
+            insuranceOptions: %InsuranceOption{},
+            internationalOptions: %InternationalOption{},
+            advancedOptions: %AdvancedOption{},
             testLabel: false
 end

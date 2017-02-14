@@ -3,20 +3,6 @@ defmodule Shipstation.Account do
   Manage shipstation accounts
   """
 
-  defstruct "firstName": nil,
-            "lastName": nil,
-            "email": nil,
-            "password": nil,
-            "shippingOriginCountryCode": "US",
-            "companyName": nil,
-            "addr1": nil,
-            "addr2": nil,
-            "city": nil,
-            "state": nil,
-            "zip": nil,
-            "countryCode": nil,
-            "phone": nil
-
     @doc ~s"""
       Creates a new ShipStation account and generates an apiKey and apiSecret to
       be used by the newly created account.
@@ -29,7 +15,8 @@ defmodule Shipstation.Account do
       To request use of this specific endpoint, please submit a case to
       apisupport@shipstation.com
     """
-    def register(params = %Shipstation.Account{}) do
+    @spec register(params :: Shipstation.Structs.Account.t) :: Shipstation.response_type
+    def register(params = %Shipstation.Structs.Account{}) do
       uri = %{Shipstation.base_uri | path: "/accounts/registeraccount"}
       Shipstation.call_api(:post, uri, params)
     end
@@ -37,6 +24,7 @@ defmodule Shipstation.Account do
     @doc ~s"""
     List all tags defined for this account
     """
+    @spec list_tags() :: Shipstation.response_type
     def list_tags do
       uri = %{Shipstation.base_uri | path: "/accounts/listtags"}
       Shipstation.call_api(:get, uri, %{})

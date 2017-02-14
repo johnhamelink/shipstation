@@ -10,7 +10,7 @@ defmodule Shipstation.AccountTest do
   test "Register User" do
     use_cassette "register_user" do
       resp =
-        %Shipstation.Account{
+        %Shipstation.Structs.Account{
           "firstName":                 "John",
           "lastName":                  "Smith",
           "email":                     "jsmithtest@gmail.com",

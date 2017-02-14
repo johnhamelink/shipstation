@@ -19,6 +19,9 @@ defmodule Shipstation do
   def base_uri,
   do: @base_uri
 
+  @type response_type :: {atom, map}
+
+  @spec call_api(verb :: atom, uri :: URI.t, body :: map, headers :: list(map)) :: response_type
   def call_api(verb, uri = %URI{}, body = %{}, headers \\ []) do
     case request(verb, uri, Poison.encode!(body), @default_headers ++ headers) do
       {:ok, resp} ->

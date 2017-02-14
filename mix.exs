@@ -21,13 +21,10 @@ defmodule Shipstation.Mixfile do
     [applications: applications() ++ applications(Mix.env)]
   end
 
-  def applications(:test) do
-    [:exvcr]
-  end
-
-  def applications() do
-    [:logger, :httpoison, :poison]
-  end
+  def applications, do: [:logger, :httpoison, :poison]
+  def applications(:test), do: [:exvcr, :credo]
+  def applications(:dev), do: [:credo, :dialyxir]
+  def applications(_), do: []
 
   # Dependencies can be Hex packages:
   #
@@ -42,7 +39,9 @@ defmodule Shipstation.Mixfile do
     [
       {:httpoison, "~> 0.11.0"},
       {:poison, "~> 3.1"},
-      {:exvcr, "~> 0.8", only: :test}
+      {:exvcr, "~> 0.8", only: :test},
+      {:credo, "~> 0.3", only: [:dev, :test]},
+      {:dialyxir, "~> 0.4", only: [:dev], runtime: false}
     ]
   end
 end

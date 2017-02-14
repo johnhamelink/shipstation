@@ -6,6 +6,7 @@ defmodule Shipstation.Fulfillment do
   @doc ~s"""
   List fulfillments without Parameters
   """
+  @spec list() :: Shipstation.response_type
   def list() do
     uri = %{Shipstation.base_uri | path: "/fulfillments"}
     Shipstation.call_api(:get, uri, %{})
@@ -17,6 +18,7 @@ defmodule Shipstation.Fulfillment do
     - Orders that have been marked as shipped either through the UI or the API will appear in the response as they are considered fulfillments.
     - All of the available filters are optional.
   """
+  @spec list(filter :: Shipstation.Filters.Fulfillment.t) :: Shipstation.response_type
   def list(filter = %Shipstation.Filters.Fulfillment{}) do
     uri = %{Shipstation.base_uri | path: "/fulfillments"}
     Shipstation.call_api(:get, uri, filter)

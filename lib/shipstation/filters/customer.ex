@@ -3,6 +3,17 @@ defmodule Shipstation.Filters.Customer do
   Parameters used when filtering customers
   """
 
+  @type t :: %Shipstation.Filters.Customer{
+    stateCode: String.t,
+    countryCode: String.t,
+    marketplaceId: integer,
+    tagId: integer,
+    sortBy: String.t,
+    sortDir: String.t,
+    page: non_neg_integer,
+    pageSize: non_neg_integer
+  }
+
   defstruct stateCode: nil,
             countryCode: nil,
             marketplaceId: nil,

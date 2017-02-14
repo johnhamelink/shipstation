@@ -6,6 +6,7 @@ defmodule Shipstation.Customer do
   @doc ~s"""
   Get a customer by their ID
   """
+  @spec get(id :: integer) :: Shipstation.response_type
   def get(id) do
     uri = %{Shipstation.base_uri | path: "/customers/#{id}"}
     Shipstation.call_api(:get, uri, %{})
@@ -14,6 +15,7 @@ defmodule Shipstation.Customer do
   @doc ~s"""
   List all matching customers
   """
+  @spec list(filter :: Shipstation.Filters.Customer.t) :: Shipstation.response_type
   def list(filter = %Shipstation.Filters.Customer{}) do
     uri = %{Shipstation.base_uri | path: "/customers"}
     Shipstation.call_api(:get, uri, filter)
