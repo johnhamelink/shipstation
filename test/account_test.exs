@@ -30,7 +30,8 @@ defmodule Shipstation.AccountTest do
     assert {:ok, %{status_code: 200}} = resp
 
     all = fn :get, data, next -> Enum.map(data, next) end
-    assert (Kernel.get_in(body, [all, "name"]) |> Enum.sort) == ["Backorder", "Canada", "Fragile", "Repeat Buyer"]
+    assert (Kernel.get_in(body, [all, "name"]) |> Enum.sort) == [
+      "Backorder", "Canada", "Fragile", "Repeat Buyer"]
   end
 
 end

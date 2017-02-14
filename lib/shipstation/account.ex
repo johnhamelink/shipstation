@@ -34,7 +34,7 @@ defmodule Shipstation.Account do
     @doc ~s"""
     List all tags defined for this account
     """
-    def list_tags() do
+    def list_tags do
       uri = %{Shipstation.base_uri | path: "/accounts/listtags"}
       Shipstation.call_api(:get, uri, %{})
     end
