@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "[{\"gift\":true,\"internalNotes\":\"Customer called and would like to upgrade shipping\",\"requestedShippingService\":\"Priority Mail\",\"packageCode\":\"package\",\"paymentMethod\":\"Credit Card\",\"internationalOptions\":null,\"customerUsername\":\"headhoncho@whitehouse.gov\",\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"orderStatus\":\"awaiting_shipment\",\"externallyFulfilled\":false,\"giftMessage\":\"Thank you!\",\"customerNotes\":\"Thanks for ordering\",\"taxAmount\":5,\"shipByDate\":\"2015-07-05T00:00:00.0000000\",\"confirmation\":\"delivery\",\"paymentDate\":\"2015-06-29T08:46:27.0000000\",\"customerId\":37701499,\"serviceCode\":\"fedex_2day\",\"advancedOptions\":null,\"shipTo\":{\"street3\":null,\"street2\":\"Oval Office\",\"street1\":\"1600 Pennsylvania Ave\",\"state\":\"DC\",\"residential\":true,\"postalCode\":\"20500\",\"phone\":\"555-555-5555\",\"name\":\"The President\",\"country\":\"US\",\"company\":\"US Govt\",\"city\":\"Washington\",\"addressVerified\":null},\"shipDate\":\"2015-07-02\",\"weight\":{\"value\":25,\"units\":\"ounces\"},\"userId\":null,\"billTo\":{\"street3\":null,\"street2\":null,\"street1\":null,\"state\":null,\"residential\":null,\"postalCode\":null,\"phone\":null,\"name\":\"The President\",\"country\":null,\"company\":null,\"city\":null,\"addressVerified\":null},\"items\":[{\"weight\":{\"value\":24,\"units\":\"ounces\"},\"warehouseLocation\":\"Aisle 1, Bin 7\",\"upc\":\"32-65-98\",\"unitPrice\":99.99,\"taxAmount\":2.5,\"sku\":\"ABC123\",\"shippingAmount\":5,\"quantity\":2,\"productId\":123456,\"orderItemId\":0,\"options\":[{\"value\":\"Large\",\"name\":\"Size\"}],\"name\":\"Test item #1\",\"modifyDate\":null,\"lineItemKey\":\"vd08-MSLbtx\",\"imageUrl\":null,\"fulfillmentSku\":null,\"createDate\":null,\"adjustment\":false}],\"insuranceOptions\":{\"provider\":\"carrier\",\"insuredValue\":200,\"insureShipment\":true},\"orderKey\":\"0f6bec18-3e89-4881-83aa-f392d84f4c74\",\"tagIds\":null,\"orderNumber\":\"TEST-ORDER-API-DOCS\",\"shippingAmount\":10,\"carrierCode\":\"fedex\",\"amountPaid\":218.73,\"externallyFulfilledBy\":null,\"orderDate\":\"2015-06-29T08:46:27.0000000\",\"customerEmail\":\"headhoncho@whitehouse.gov\"}]",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/createorders"
+    },
+    "response": {
+      "body": "   {\n        \"hasErrors\": false,\n        \"results\": [\n            {\n                \"orderId\": 58345234,\n                \"orderNumber\": \"TEST-ORDER-API-DOCS\",\n                \"orderKey\": \"0f6bec18-3e89-4881-83aa-f392d84f4c74\",\n                \"success\": true,\n                \"errorMessage\": null\n            }\n        ]\n    }",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a388d55fbd811900897162",
+        "Content-Length": "326",
+        "Date": "Tue, 14 Feb 2017 22:46:45 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
