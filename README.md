@@ -1,7 +1,7 @@
 # Shipstation
 
 [![Ebert](https://ebertapp.io/github/johnhamelink/shipstation.svg)](https://ebertapp.io/github/johnhamelink/shipstation)
-[![Travis](https://img.shields.io/travis/johnhamelink/shipstation.svg)]()
+[![Travis](https://img.shields.io/travis/johnhamelink/shipstation.svg)](https://travis-ci.org/johnhamelink/shipstation)
 [![Hex.pm](https://img.shields.io/hexpm/johnhamelink/shipstation.svg)](https://hexdocs.pm/shipstation)
 [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/johnhamelink/shipstation.svg)](https://libraries.io/github/johnhamelink/shipstation)
 
