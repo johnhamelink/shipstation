@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"carrierCode\":\"fedex\",\"amount\":\"20.00\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/addfunds"
+    },
+    "response": {
+      "body": "{\n  \"name\": \"Stamps.com\",\n  \"code\": \"stamps_com\",\n  \"accountNumber\": \"SS123\",\n  \"requiresFundedAccount\": true,\n  \"balance\": 24.14\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "116",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a256f0a3da641900321568",
+        "Content-Length": "131",
+        "Date": "Tue, 14 Feb 2017 01:01:36 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

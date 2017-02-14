@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers"
+    },
+    "response": {
+      "body": "[\n  {\n    \"name\": \"Express 1\",\n    \"code\": \"express_1\",\n    \"accountNumber\": \"fe71c33f\",\n    \"requiresFundedAccount\": true,\n    \"balance\": 0.27\n  },\n  {\n    \"name\": \"Stamps.com\",\n    \"code\": \"stamps_com\",\n    \"accountNumber\": \"SS123\",\n    \"requiresFundedAccount\": true,\n    \"balance\": 24.14\n  },\n  {\n    \"name\": \"UPS\",\n    \"code\": \"ups\",\n    \"accountNumber\": \"ABCR80\",\n    \"requiresFundedAccount\": false,\n    \"balance\": 0\n  },\n  {\n    \"name\": \"FedEx\",\n    \"code\": \"fedex\",\n    \"accountNumber\": \"297929999\",\n    \"requiresFundedAccount\": false,\n    \"balance\": 0\n  },\n  {\n    \"name\": \"Endicia\",\n    \"code\": \"endicia\",\n    \"accountNumber\": \"913999\",\n    \"requiresFundedAccount\": true,\n    \"balance\": 84.86\n  }\n]",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a256ef3faea91900a2f5e6",
+        "Content-Length": "707",
+        "Date": "Tue, 14 Feb 2017 01:01:35 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

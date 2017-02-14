@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"carrierCode\":\"fedex\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/listservices"
+    },
+    "response": {
+      "body": "[\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_ground\",\n    \"name\": \"FedEx Ground®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_home_delivery\",\n    \"name\": \"FedEx Home Delivery®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_2day\",\n    \"name\": \"FedEx 2Day®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_2day_am\",\n    \"name\": \"FedEx 2Day® A.M.\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_express_saver\",\n    \"name\": \"FedEx Express Saver®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_standard_overnight\",\n    \"name\": \"FedEx Standard Overnight®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_priority_overnight\",\n    \"name\": \"FedEx Priority Overnight®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_first_overnight\",\n    \"name\": \"FedEx First Overnight®\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_1_day_freight\",\n    \"name\": \"FedEx 1 Day® Freight\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_2_day_freight\",\n    \"name\": \"FedEx 2 Day® Freight\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_3_day_freight\",\n    \"name\": \"FedEx 3 Day® Freight\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_first_overnight_freight\",\n    \"name\": \"FedEx First Overnight® Freight\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_ground_international\",\n    \"name\": \"FedEx Ground® International\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_international_economy\",\n    \"name\": \"FedEx International Economy®\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_international_priority\",\n    \"name\": \"FedEx International Priority®\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_international_first\",\n    \"name\": \"FedEx International First®\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_europe_first\",\n    \"name\": \"FedEx Europe First®\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_international_economy_freight\",\n    \"name\": \"FedEx International Economy® Freight\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"fedex\",\n    \"code\": \"fedex_international_priority_freight\",\n    \"name\": \"FedEx International Priority® Freight\",\n    \"domestic\": false,\n    \"international\": true\n  }\n]",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "115",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a256f0a3da641900321569",
+        "Content-Length": "3130",
+        "Date": "Tue, 14 Feb 2017 01:01:36 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

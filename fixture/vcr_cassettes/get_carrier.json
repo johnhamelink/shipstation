@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"carrierCode\":\"stamps_com\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/getcarrier"
+    },
+    "response": {
+      "body": "{\n  \"name\": \"Stamps.com\",\n  \"code\": \"stamps_com\",\n  \"accountNumber\": \"SS123\",\n  \"requiresFundedAccount\": true,\n  \"balance\": 24.14\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "117",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a256efb2ddc11900f294a0",
+        "Content-Length": "131",
+        "Date": "Tue, 14 Feb 2017 01:01:35 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

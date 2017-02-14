@@ -7,14 +7,26 @@ defmodule Shipstation.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     preferred_cli_env: [
+       vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test
+     ]
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison, :poison]]
+    [applications: applications() ++ applications(Mix.env)]
+  end
+
+  def applications(:test) do
+    [:exvcr]
+  end
+
+  def applications() do
+    [:logger, :httpoison, :poison]
   end
 
   # Dependencies can be Hex packages:
@@ -29,7 +41,8 @@ defmodule Shipstation.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.11.0"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:exvcr, "~> 0.8", only: :test}
     ]
   end
 end
