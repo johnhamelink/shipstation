@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"weight\":{\"value\":2,\"units\":\"pounds\"},\"testLabel\":false,\"shipDate\":\"2014-04-03\",\"serviceCode\":\"fedex_2day\",\"packageCode\":\"package\",\"orderId\":93348442,\"internationalOptions\":null,\"insuranceOptions\":null,\"dimensions\":null,\"confirmation\":null,\"carrierCode\":\"fedex\",\"advancedOptions\":null}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/createlabelfororder"
+    },
+    "response": {
+      "body": "{\n  \"shipmentId\": 72513480,\n  \"shipmentCost\": 7.3,\n  \"insuranceCost\": 0,\n  \"trackingNumber\": \"248201115029520\",\n  \"labelData\": \"JVBERi0xLjQKJeLjz9MKMiAwIG9iago8PC9MZW5ndGggNjIvRmlsdGVyL0ZsYXRlRGVjb2RlPj5zdHJlYW0KeJwr5HIK4TI2UzC2NFMISeFyDeEK5CpUMFQwAEJDBV0jCz0LBV1jY0M9I4XkXAX9iDRDBZd8hUAuAEdGC7cKZW5kc3RyZWFtCmVuZG9iago0IDAgb2JqCjw8L1R5cGUvUGFnZS9NZWRpYUJveFswIDAgMjg4IDQzMl0vUmVzb3VyY2VzPDwvUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0vWE9iamVjdDw8L1hmMSAxIDAgUj4+Pj4vQ29udGVudHMgMiAwIFIvUGFyZW50....\",\n  \"formData\": null\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a267642f89481900e76cb9",
+        "Content-Length": "539",
+        "Date": "Tue, 14 Feb 2017 02:11:48 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
