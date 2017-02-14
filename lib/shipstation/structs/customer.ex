@@ -1,9 +1,9 @@
-defmodule Shipstation.Filters.Customer do
+defmodule Shipstation.Structs.Customer do
   @moduledoc ~s"""
   Parameters used when filtering customers
   """
 
-  @type t :: %Shipstation.Filters.Customer{
+  @type t :: %Shipstation.Structs.Customer{
     stateCode: String.t,
     countryCode: String.t,
     marketplaceId: integer,

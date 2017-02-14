@@ -22,7 +22,7 @@ defmodule Shipstation.FulfillmentTest do
   """
   test "List with parameters" do
     use_cassette "fulfillments_list_with_params" do
-      filter = %Shipstation.Filters.Fulfillment{}
+      filter = %Shipstation.Structs.Fulfillment{}
       {:ok, %{body: body}} = resp = Shipstation.Fulfillment.list(filter)
       assert {:ok, %{status_code: 200}} = resp
 

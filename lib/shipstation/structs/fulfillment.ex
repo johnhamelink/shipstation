@@ -1,9 +1,9 @@
-defmodule Shipstation.Filters.Fulfillment do
+defmodule Shipstation.Structs.Fulfillment do
   @moduledoc ~s"""
   Parameters used when filtering fulfillments
   """
 
-  @type t :: %Shipstation.Filters.Fulfillment{
+  @type t :: %Shipstation.Structs.Fulfillment{
     fulfillmentId: integer,
     orderId: integer,
     orderNumber: String.t,
