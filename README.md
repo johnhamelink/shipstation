@@ -3,7 +3,7 @@
 [![Ebert](https://ebertapp.io/github/johnhamelink/shipstation.svg)](https://ebertapp.io/github/johnhamelink/shipstation)
 [![Travis](https://img.shields.io/travis/johnhamelink/shipstation.svg)]()
 [![Hex.pm](https://img.shields.io/hexpm/johnhamelink/shipstation.svg)]()
-[![Libraries.io for releases](https://img.shields.io/librariesio/release/johnhamelink/shipstation/1.0.3.svg)]()
+[![Libraries.io for GitHub](https://img.shields.io/librariesio/github/johnhamelink/shipstation.svg)]()
 
 ---
 
