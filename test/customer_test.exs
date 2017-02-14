@@ -22,7 +22,7 @@ defmodule Shipstation.CustomerTest do
 
   test "List Customers" do
     use_cassette "list_customers" do
-      params = %Shipstation.Customer.Filter{
+      params = %Shipstation.Filters.Customer{
         stateCode: nil,
         countryCode: nil,
         marketplaceId: nil,

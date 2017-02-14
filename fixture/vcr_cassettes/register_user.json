@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"zip\":\"78703\",\"state\":\"TX\",\"shippingOriginCountryCode\":\"US\",\"phone\":\"5124111234\",\"password\":\"testpw1234\",\"lastName\":\"Smith\",\"firstName\":\"John\",\"email\":\"jsmithtest@gmail.com\",\"countryCode\":\"US\",\"companyName\":\"Droid Repair LLC\",\"city\":\"Austin\",\"addr2\":\"\",\"addr1\":\"542 Midichlorian Rd.\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/accounts/registeraccount"
+    },
+    "response": {
+      "body": "{\n  \"message\": \"ShipStation account created.\",\n  \"sellerId\": 123456,\n  \"success\": true,\n  \"apiKey\": \"abcdt9845hjmgfklj3498gkljdkuyekl\",\n  \"apiSecret\": \"1234iou983lkj8mnxgfwu509hkhdy7u3\"\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "114",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a25679085e9c19000586a3",
+        "Content-Length": "187",
+        "Date": "Tue, 14 Feb 2017 00:59:37 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

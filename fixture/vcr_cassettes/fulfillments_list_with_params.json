@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"trackingNumber\":null,\"sortDir\":null,\"sortBy\":null,\"shipDateStart\":null,\"shipDateEnd\":null,\"receiptName\":null,\"pageSize\":100,\"page\":1,\"orderNumber\":null,\"orderId\":null,\"createDateStart\":null,\"createDateEnd\":null}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/fulfillments"
+    },
+    "response": {
+      "body": "{\n  \"fulfillments\": [\n    {\n      \"fulfillmentId\": 33974374,\n      \"orderId\": 191759016,\n      \"orderNumber\": \"101\",\n      \"userId\": \"c9f06d74-95de-4263-9b04-e87095cababf\",\n      \"customerEmail\": \"apisupport@shipstation.com\",\n      \"trackingNumber\": \"783408231234\",\n      \"createDate\": \"2016-06-07T08:50:50.0670000\",\n      \"shipDate\": \"2016-06-07T00:00:00.0000000\",\n      \"voidDate\": null,\n      \"deliveryDate\": null,\n      \"carrierCode\": \"USPS\",\n      \"fulfillmentProviderCode\": null,\n      \"fulfillmentServiceCode\": null,\n      \"fulfillmentFee\": 0,\n      \"voidRequested\": false,\n      \"voided\": false,\n      \"marketplaceNotified\": true,\n      \"notifyErrorMessage\": null,\n      \"shipTo\": {\n        \"name\": \"Yoda\",\n        \"company\": null,\n        \"street1\": \"3800 N Lamar Blvd # 220\",\n        \"street2\": null,\n        \"street3\": null,\n        \"city\": \"AUSTIN\",\n        \"state\": \"TX\",\n        \"postalCode\": \"78756\",\n        \"country\": \"US\",\n        \"phone\": \"512-485-4282\",\n        \"residential\": null,\n        \"addressVerified\": null\n        }\n      },\n      {\n        \"fulfillmentId\": 246310,\n        \"orderId\": 193699927,\n        \"orderNumber\": \"101\",\n        \"userId\": \"c9f06d74-95de-4263-9b04-e87095cababf\",\n        \"customerEmail\": \"apisupport@shipstation.com\",\n        \"trackingNumber\": \"664756278745\",\n        \"createDate\": \"2016-06-08T12:54:53.3470000\",\n        \"shipDate\": \"2016-06-08T00:00:00.0000000\",\n        \"voidDate\": null,\n        \"deliveryDate\": null,\n        \"carrierCode\": \"FedEx\",\n        \"fulfillmentProviderCode\": null,\n        \"fulfillmentServiceCode\": null,\n        \"fulfillmentFee\": 0,\n        \"voidRequested\": false,\n        \"voided\": false,\n        \"marketplaceNotified\": true,\n        \"notifyErrorMessage\": null,\n        \"shipTo\": {\n          \"name\": \"Yoda\",\n          \"company\": null,\n          \"street1\": \"3800 N Lamar Blvd # 220\",\n          \"street2\": null,\n          \"street3\": null,\n          \"city\": \"AUSTIN\",\n          \"state\": \"TX\",\n          \"postalCode\": \"78756\",\n          \"country\": \"US\",\n          \"phone\": \"512-485-4282\",\n          \"residential\": null,\n          \"addressVerified\": null\n        }\n    }\n  ],\n  \"total\": 2,\n  \"page\": 1,\n  \"pages\": 0\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a25b5e67fc911900b8184e",
+        "Content-Length": "2192",
+        "Date": "Tue, 14 Feb 2017 01:20:30 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

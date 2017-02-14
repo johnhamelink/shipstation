@@ -11,7 +11,7 @@ defmodule Shipstation.Customer do
     @doc ~s"""
     List all matching customers
     """
-    def list(filter = %Shipstation.Customer.Filter{}) do
+    def list(filter = %Shipstation.Filters.Customer{}) do
       uri = %{Shipstation.base_uri | path: "/customers"}
       Shipstation.call_api(:get, uri, filter)
     end

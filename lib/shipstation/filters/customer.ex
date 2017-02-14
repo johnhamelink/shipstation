@@ -1,4 +1,4 @@
-defmodule Shipstation.Customer.Filter do
+defmodule Shipstation.Filters.Customer do
   defstruct stateCode: nil,
             countryCode: nil,
             marketplaceId: nil,
