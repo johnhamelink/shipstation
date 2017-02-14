@@ -9,11 +9,11 @@ defmodule Shipstation.OrderTest do
 
   test "Get an order" do
     use_cassette "get_order" do
-      {:ok, %{body: body}} = resp = Shipstation.Order.get(123456789)
+      {:ok, %{body: body}} = resp = Shipstation.Order.get(123_456_789)
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert body["orderId"] == 94113592
+      assert body["orderId"] == 94_113_592
       assert get_in(body, ["billTo", "name"]) == "The President"
       assert get_in(body, ["shipTo", "phone"]) == "555-555-5555"
       assert get_in(body, ["items", all, "lineItemKey"]) == ["vd08-MSLbtx", nil]
@@ -22,7 +22,7 @@ defmodule Shipstation.OrderTest do
 
   test "Delete an order" do
     use_cassette "delete_order" do
-      {:ok, %{body: body}} = resp = Shipstation.Order.delete(123456789)
+      {:ok, %{body: body}} = resp = Shipstation.Order.delete(123_456_789)
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"success" => true, "message" => "The requested order has been deleted."}
     end
@@ -30,7 +30,7 @@ defmodule Shipstation.OrderTest do
 
   test "Add a tag to an order" do
     use_cassette "add_tag_to_order" do
-      {:ok, %{body: body}} = resp = Shipstation.Order.add_tag(123456, 1234)
+      {:ok, %{body: body}} = resp = Shipstation.Order.add_tag(123_456, 1234)
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"success" => true, "message" => "Tag added successfully."}
     end
@@ -39,7 +39,7 @@ defmodule Shipstation.OrderTest do
   test "Assign a user to an order" do
     use_cassette "assign_user_to_order" do
       {:ok, %{body: body}} = resp = Shipstation.Order.assign_user(
-        [123456789, 12345679], "123456AB-ab12-3c4d-5e67-89f1abc1defa")
+        [123_456_789, 12_345_679], "123456AB-ab12-3c4d-5e67-89f1abc1defa")
 
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"success" => true, "message" => "User assigned successfully."}

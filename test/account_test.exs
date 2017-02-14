@@ -9,7 +9,7 @@ defmodule Shipstation.AccountTest do
 
   test "Register User" do
     use_cassette "register_user" do
-      resp =
+      params =
         %Shipstation.Structs.Account{
           "firstName":                 "John",
           "lastName":                  "Smith",
@@ -25,9 +25,8 @@ defmodule Shipstation.AccountTest do
           "countryCode":               "US",
           "phone":                     "5124111234"
         }
-        |> Shipstation.Account.register
 
-      assert {:ok, %{status_code: 200}} = resp
+      assert {:ok, %{status_code: 200}} = Shipstation.Account.register(params)
     end
   end
 
