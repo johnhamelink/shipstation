@@ -201,4 +201,15 @@ defmodule Shipstation.OrderTest do
     end
   end
 
+  test "Create multiple orders", context do
+    use_cassette "create_orders" do
+      orders = [%{ context[:order] | orderKey: nil }]
+      {:ok, %{body: body}} = resp = Shipstation.Order.upsert_orders(orders)
+
+      assert {:ok, %{status_code: 200}} = resp
+      assert get_in(body, ["hasErrors"]) == false
+      assert body["results"] |> List.first |> Map.fetch!("orderKey") == "0f6bec18-3e89-4881-83aa-f392d84f4c74"
+    end
+  end
+
 end
