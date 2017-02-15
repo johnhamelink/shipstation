@@ -17,6 +17,7 @@ An API client library for [Shipstation](https://shipstation.com).
  - [x] Finish building out API
  - [x] Add authentication layer for use against the actual API
  - [x] Configure base URL to connect to (for test/staging/production environments)
+ - [x] Handle backpressure with a [backpressure Agent](https://github.com/johnhamelink/shipstation/blob/master/lib/request_limit.ex)
  - [ ] Deserialize JSON output into Model structs
 
 ## Installation
