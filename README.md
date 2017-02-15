@@ -8,6 +8,8 @@
 
 ---
 
+## Warning: This project has not yet been tested in production. All the unit tests are based on the Example API Shipstation provide.
+
 An API client library for [Shipstation](https://shipstation.com).
 
 ### Todo (PRs welcome):
