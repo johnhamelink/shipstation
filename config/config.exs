@@ -3,10 +3,8 @@
 use Mix.Config
 
 config :shipstation,
-  base_uri: "https://ssapi.shipstation.com",
+  base_uri: "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com",
   auth: %{
     api_key: nil,
     api_secret: nil
   }
-
-import_config "#{Mix.env}.exs"
