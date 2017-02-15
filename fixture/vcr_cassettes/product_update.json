@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"width\":null,\"weightOz\":null,\"warehouseLocation\":null,\"tags\":null,\"sku\":\"\",\"productType\":null,\"productId\":123456789,\"productCategory\":null,\"price\":0,\"noCustoms\":null,\"name\":\"Beautiful\",\"modifyDate\":null,\"length\":null,\"internalNotes\":null,\"height\":null,\"fulfillmentSku\":null,\"defaultServiceCode\":null,\"defaultPackageCode\":null,\"defaultIntlServiceCode\":null,\"defaultIntlPackageCode\":null,\"defaultIntlConfirmation\":null,\"defaultIntlCarrierCode\":null,\"defaultCost\":null,\"defaultConfirmation\":null,\"defaultCarrierCode\":null,\"customsValue\":null,\"customsTariffNo\":null,\"customsDescription\":null,\"customsCountryCode\":null,\"createDate\":null,\"active\":true}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/products/12345678"
+    },
+    "response": {
+      "body": "{\n        \"success\": true,\n        \"message\": \"The requested product has been updated\"\n    }",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3a40121e5d71900a4040b",
+        "Content-Length": "92",
+        "Date": "Wed, 15 Feb 2017 00:42:41 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
