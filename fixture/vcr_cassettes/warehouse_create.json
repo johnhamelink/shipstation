@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":0,\"returnAddress\":null,\"originAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"isDefault\":true,\"createDate\":null}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/warehouses/createwarehouse"
+    },
+    "response": {
+      "body": "{\n  \"warehouseId\": 17977,\n  \"warehouseName\": \"New Ship From Location\",\n  \"originAddress\": {\n    \"name\": \"NM Warehouse\",\n    \"company\": \"White Sands Co\",\n    \"street1\": \"4704 Arabela Dr.\",\n    \"street2\": \"\",\n    \"street3\": \"\",\n    \"city\": \"Las Cruces\",\n    \"state\": \"NM\",\n    \"postalCode\": \"88012\",\n    \"country\": \"US\",\n    \"phone\": \"512-111-2222\",\n    \"residential\": true\n  },\n  \"returnAddress\": {\n    \"name\": \"NM Warehouse\",\n    \"company\": \"White Sands Co\",\n    \"street1\": \"4704 Arabela Dr.\",\n    \"street2\": \"\",\n    \"street3\": \"\",\n    \"city\": \"Las Cruces\",\n    \"state\": \"NM\",\n    \"postalCode\": \"88012\",\n    \"country\": \"US\",\n    \"phone\": \"512-111-2222\",\n    \"residential\": null\n  },\n  \"createDate\": \"2014-10-21T08:11:43.8800000\",\n  \"isDefault\": false\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3c11e97de7319008399dd",
+        "Content-Length": "752",
+        "Date": "Wed, 15 Feb 2017 02:46:54 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

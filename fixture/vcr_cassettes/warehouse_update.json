@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":12345,\"returnAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"originAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"isDefault\":true,\"createDate\":\"2015-07-02T08:38:31.4870000\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/warehouses/12345678"
+    },
+    "response": {
+      "body": "{\n    \"warehouseId\": 12345,\n    \"warehouseName\": \"API Ship From Location\",\n    \"originAddress\": {\n      \"name\": \"API Warehouse\",\n      \"company\": \"ShipStation\",\n      \"street1\": \"2815 Exposition Blvd\",\n      \"street2\": null,\n      \"street3\": null,\n      \"city\": \"Austin\",\n      \"state\": \"TX\",\n      \"postalCode\": \"78703\",\n      \"country\": \"US\",\n      \"phone\": \"512-555-5555\",\n      \"residential\": true,\n      \"addressVerified\": null\n    },\n    \"returnAddress\": {\n      \"name\": \"API Ship From Location\",\n      \"company\": \"ShipStation\",\n      \"street1\": \"2815 Exposition Blvd\",\n      \"street2\": null,\n      \"street3\": null,\n      \"city\": \"Austin\",\n      \"state\": \"TX\",\n      \"postalCode\": \"78703\",\n      \"country\": \"US\",\n      \"phone\": \"512-555-5555\",\n      \"residential\": null,\n      \"addressVerified\": null\n    },\n    \"createDate\": \"2015-07-02T08:38:31.4870000\",\n    \"isDefault\": true\n  }",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Authorization": "< Enter your Basic Authorization string here >",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3c05821e5d71900a416c7",
+        "Content-Length": "888",
+        "Date": "Wed, 15 Feb 2017 02:43:36 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
