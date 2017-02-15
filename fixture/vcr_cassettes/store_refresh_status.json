@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"storeId\":12345}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/getrefreshstatus"
+    },
+    "response": {
+      "body": "{\n  \"storeId\": 12345,\n  \"refreshStatusId\": 2,\n  \"refreshStatus\": \"Updating orders\",\n  \"lastRefreshAttempt\": \"8-13-2014\",\n  \"refreshDate\": \"8-13-2014\"\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3b6a8cc0da71900577806",
+        "Content-Length": "151",
+        "Date": "Wed, 15 Feb 2017 02:02:16 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

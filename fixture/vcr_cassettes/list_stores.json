@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"showInactive\":false,\"marketplaceId\":null}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores"
+    },
+    "response": {
+      "body": "[\n  {\n    \"storeId\": 22766,\n    \"storeName\": \"ShipStation Manual Store\",\n    \"marketplaceId\": 0,\n    \"marketplaceName\": \"ShipStation\",\n    \"accountName\": null,\n    \"email\": null,\n    \"integrationUrl\": null,\n    \"active\": true,\n    \"companyName\": \"\",\n    \"phone\": \"\",\n    \"publicEmail\": \"testemail@email.com\",\n    \"website\": \"\",\n    \"refreshDate\": \"2014-12-03T11:46:11.283\",\n    \"lastRefreshAttempt\": \"2014-12-03T11:46:53.433\",\n    \"createDate\": \"2014-07-25T11:05:55.307\",\n    \"modifyDate\": \"2014-11-12T08:45:20.55\",\n    \"autoRefresh\": false\n  },\n  {\n    \"storeId\": 25748,\n    \"storeName\": \"Ashley's Test WooCommerce\",\n    \"marketplaceId\": 36,\n    \"marketplaceName\": \"WooCommerce\",\n    \"accountName\": null,\n    \"email\": null,\n    \"integrationUrl\": \"http://shipstation.wpengine.com/\",\n    \"active\": true,\n    \"companyName\": \"\",\n    \"phone\": \"\",\n    \"publicEmail\": \"\",\n    \"website\": \"\",\n    \"refreshDate\": \"2014-11-26T22:28:14.07\",\n    \"lastRefreshAttempt\": \"2014-11-26T14:28:14.07\",\n    \"createDate\": \"2014-11-10T08:53:48.077\",\n    \"modifyDate\": \"2014-12-03T14:53:50.557\",\n    \"autoRefresh\": true\n  }\n]",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "118",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3b4e56ad6b219008cab34",
+        "Content-Length": "1101",
+        "Date": "Wed, 15 Feb 2017 01:54:45 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

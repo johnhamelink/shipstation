@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/marketplaces"
+    },
+    "response": {
+      "body": "[\n  {\n    \"name\": \"3DCart\",\n    \"marketplaceId\": 23,\n    \"canRefresh\": true,\n    \"supportsCustomMappings\": true,\n    \"supportsCustomStatuses\": false,\n    \"canConfirmShipments\": true\n  },\n  {\n    \"name\": \"Amazon\",\n    \"marketplaceId\": 2,\n    \"canRefresh\": true,\n    \"supportsCustomMappings\": true,\n    \"supportsCustomStatuses\": false,\n    \"canConfirmShipments\": true\n  },\n  {\n    \"name\": \"Amazon CA\",\n    \"marketplaceId\": 32,\n    \"canRefresh\": true,\n    \"supportsCustomMappings\": true,\n    \"supportsCustomStatuses\": false,\n    \"canConfirmShipments\": true\n  }\n]",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3b5ac5fbd8119008993a6",
+        "Content-Length": "559",
+        "Date": "Wed, 15 Feb 2017 01:58:04 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"storeId\":12345}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/reactivate"
+    },
+    "response": {
+      "body": "{\n  \"success\": \"true\",\n  \"message\": \"The requested store has been reactivated.\"\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3bb12eb5c751900c0758d",
+        "Content-Length": "81",
+        "Date": "Wed, 15 Feb 2017 02:21:06 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

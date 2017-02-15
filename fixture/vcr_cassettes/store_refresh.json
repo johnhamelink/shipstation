@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"storeId\":12345,\"refreshDate\":\"12-08-2014\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/refreshstore"
+    },
+    "response": {
+      "body": "{\n    \"storeId\": 12345,\n    \"storeName\": \"WooCommerce Store\",\n    \"marketplaceId\": 36,\n    \"marketplaceName\": \"WooCommerce\",\n    \"accountName\": null,\n    \"email\": null,\n    \"integrationUrl\": \"http://shipstation-test.wpengine.com\",\n    \"active\": true,\n    \"companyName\": \"\",\n    \"phone\": \"\",\n    \"publicEmail\": \"\",\n    \"website\": \"\",\n    \"refreshDate\": \"2014-12-16T17:47:05.457\",\n    \"lastRefreshAttempt\": \"2014-12-16T09:47:05.457\",\n    \"createDate\": \"2014-11-06T15:21:13.223\",\n    \"modifyDate\": \"2014-11-10T08:02:19.117\",\n    \"autoRefresh\": true,\n    \"statusMappings\": [\n        {\n            \"orderStatus\": \"awaiting_payment\",\n            \"statusKey\": \"Pending\"\n        },\n        {\n            \"orderStatus\": \"awaiting_shipment\",\n            \"statusKey\": \"Processing\"\n        },\n        {\n            \"orderStatus\": \"shipped\",\n            \"statusKey\": \"Completed\"\n        },\n        {\n            \"orderStatus\": \"cancelled\",\n            \"statusKey\": \"Cancelled\"\n        },\n        {\n            \"orderStatus\": \"on_hold\",\n            \"statusKey\": \"On-hold\"\n        }\n    ]\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Authorization": "< Enter your Basic Authorization string here >",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3ba3ceb5c751900c07503",
+        "Content-Length": "1075",
+        "Date": "Wed, 15 Feb 2017 02:17:32 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
