@@ -13,7 +13,7 @@ defmodule Shipstation.ShipmentTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert Enum.sort(get_in(body, ["shipments", all, "shipmentId"])) == [33974373, 33974374]
+      assert Enum.sort(get_in(body, ["shipments", all, "shipmentId"])) == [33_974_373, 33_974_374]
     end
   end
 
@@ -43,7 +43,7 @@ defmodule Shipstation.ShipmentTest do
       assert {:ok, %{status_code: 200}} = resp
 
       all = fn :get, data, next -> Enum.map(data, next) end
-      assert Enum.sort(get_in(body, ["shipments", all, "shipmentId"])) == [33974373, 33974374]
+      assert Enum.sort(get_in(body, ["shipments", all, "shipmentId"])) == [33_974_373, 33_974_374]
     end
   end
 
@@ -90,7 +90,7 @@ defmodule Shipstation.ShipmentTest do
 
   test "void shipment label" do
     use_cassette "void_shipment_label" do
-      {:ok, %{body: body}} = resp = Shipstation.Shipment.void_label(12345)
+      {:ok, %{body: body}} = resp = Shipstation.Shipment.void_label(12_345)
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"approved" => true, "message" => "Label voided successfully"}
     end

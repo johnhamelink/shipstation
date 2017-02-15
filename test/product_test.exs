@@ -52,7 +52,7 @@ defmodule Shipstation.ProductTest do
   test "Update product" do
     use_cassette "product_update" do
       params = %Shipstation.Structs.Product{
-        productId: 123456789,
+        productId: 123_456_789,
         sku: "",
         name: "Beautiful",
         price: 0,

@@ -190,7 +190,7 @@ defmodule Shipstation.OrderTest do
 
   test "Update an order", context do
     use_cassette "update_order" do
-      params = %{ context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74" }
+      params = %{context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74"}
       {:ok, %{body: body}} = resp = Shipstation.Order.upsert(params)
 
       assert {:ok, %{status_code: 200}} = resp
@@ -200,7 +200,7 @@ defmodule Shipstation.OrderTest do
 
   test "Create Order", context do
     use_cassette "create_order" do
-      params = %{ context[:order] | orderKey: nil }
+      params = %{context[:order] | orderKey: nil}
       {:ok, %{body: body}} = resp = Shipstation.Order.upsert(params)
 
       assert {:ok, %{status_code: 200}} = resp
@@ -210,7 +210,7 @@ defmodule Shipstation.OrderTest do
 
   test "Update multiple orders", context do
     use_cassette "update_orders" do
-      orders = [%{ context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74" }]
+      orders = [%{context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74"}]
       {:ok, %{body: body}} = resp = Shipstation.Order.upsert(orders)
 
       assert {:ok, %{status_code: 200}} = resp
@@ -221,7 +221,7 @@ defmodule Shipstation.OrderTest do
 
   test "Create multiple orders", context do
     use_cassette "create_orders" do
-      orders = [%{ context[:order] | orderKey: nil }]
+      orders = [%{context[:order] | orderKey: nil}]
       {:ok, %{body: body}} = resp = Shipstation.Order.upsert(orders)
 
       assert {:ok, %{status_code: 200}} = resp
@@ -232,7 +232,7 @@ defmodule Shipstation.OrderTest do
 
   test "Set an 'order hold until' date" do
     use_cassette "hold_order_until" do
-      {:ok, %{body: body}} = resp = Shipstation.Order.hold_until(1072467, "2014-12-01")
+      {:ok, %{body: body}} = resp = Shipstation.Order.hold_until(1_072_467, "2014-12-01")
 
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"message" => "Order held successfully.", "success" => true}
@@ -241,7 +241,7 @@ defmodule Shipstation.OrderTest do
 
   test "Restore order from 'on hold'" do
     use_cassette "restore_order_from_on_hold" do
-      {:ok, %{body: body}} = resp = Shipstation.Order.restore_from_on_hold(1072467)
+      {:ok, %{body: body}} = resp = Shipstation.Order.restore_from_on_hold(1_072_467)
 
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"message" => "The requested order has been restored", "success" => true}
@@ -269,11 +269,11 @@ defmodule Shipstation.OrderTest do
         modifyDateEnd:   "2015-01-08 00:00:00",
         orderDateStart:  "2015-01-01 00:00:00",
         orderDateEnd:    "2015-01-08 00:00:00",
-        orderNumber:     12345,
+        orderNumber:     12_345,
         orderStatus:     "awaiting_shipment",
         paymentDateStart: "2015-01-01",
         paymentDateEnd:   "2015-01-08",
-        storeId:          123456,
+        storeId:          123_456,
         sortBy:           "OrderDate",
         sortDir:          "ASC",
         page:             1,

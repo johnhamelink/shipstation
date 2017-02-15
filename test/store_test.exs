@@ -58,7 +58,7 @@ defmodule Shipstation.StoreTest do
 
   test "Get Store Refresh Status" do
     use_cassette "store_refresh_status" do
-      {:ok, %{body: body}} = resp = Shipstation.Store.refresh_status(12345)
+      {:ok, %{body: body}} = resp = Shipstation.Store.refresh_status(12_345)
       assert {:ok, %{status_code: 200}} = resp
 
       assert get_in(body, ["refreshStatus"]) == "Updating orders"
@@ -67,7 +67,7 @@ defmodule Shipstation.StoreTest do
 
   test "Refresh a store" do
     use_cassette "store_refresh" do
-      {:ok, %{body: body}} = resp = Shipstation.Store.refresh(12345, "12-08-2014")
+      {:ok, %{body: body}} = resp = Shipstation.Store.refresh(12_345, "12-08-2014")
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["storeName"]) == "WooCommerce Store"
     end

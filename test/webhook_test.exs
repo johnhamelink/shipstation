@@ -34,7 +34,7 @@ defmodule Shipstation.WebhookTest do
 
   test "Unsubscribe to Webhook" do
     use_cassette "webhook_unsubscribe" do
-      assert %{status_code: 200} = Shipstation.Webhook.unsubscribe(12345)
+      assert %{status_code: 200} = Shipstation.Webhook.unsubscribe(12_345)
     end
   end
 
