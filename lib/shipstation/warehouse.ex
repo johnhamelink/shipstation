@@ -7,19 +7,19 @@ defmodule Shipstation.Warehouse do
   the ShipStation account. Warehouses are now called "Ship From Locations" in
   the UI.
   """
-  @spec get(warehouse_id :: integer) :: Shipstation.response_type
+  @spec get(warehouse_id :: integer) :: Shipstation.Client.response_type
   def get(warehouse_id) do
-    uri = %{Shipstation.base_uri | path: "/warehouses/#{warehouse_id}"}
-    Shipstation.call_api(:get, uri, %{})
+    uri = %{Shipstation.Client.base_uri | path: "/warehouses/#{warehouse_id}"}
+    Shipstation.Client.call_api(:get, uri, %{})
   end
 
   @doc ~s"""
   Retrieves a list of your Ship From Locations (formerly known as warehouses).
   """
-  @spec list() :: Shipstation.response_type
+  @spec list() :: Shipstation.Client.response_type
   def list() do
-    uri = %{Shipstation.base_uri | path: "/warehouses"}
-    Shipstation.call_api(:get, uri, %{})
+    uri = %{Shipstation.Client.base_uri | path: "/warehouses"}
+    Shipstation.Client.call_api(:get, uri, %{})
   end
 
   @doc ~s"""
@@ -28,19 +28,19 @@ defmodule Shipstation.Warehouse do
   provided in the body of the request. If a "returnAddress" object is not
   specified, your "originAddress" will be used as your "returnAddress".
   """
-  @spec update(warehouse_id :: integer, warehouse :: Shipstation.Structs.Warehouse.t) :: Shipstation.response_type
+  @spec update(warehouse_id :: integer, warehouse :: Shipstation.Structs.Warehouse.t) :: Shipstation.Client.response_type
   def update(warehouse_id, warehouse) do
-    uri = %{Shipstation.base_uri | path: "/warehouses/#{warehouse_id}"}
-    Shipstation.call_api(:put, uri, warehouse)
+    uri = %{Shipstation.Client.base_uri | path: "/warehouses/#{warehouse_id}"}
+    Shipstation.Client.call_api(:put, uri, warehouse)
   end
 
   @doc ~s"""
   Adds a Ship From Location (formerly known as warehouse) to your account.
   """
-  @spec create(warehouse :: Shipstation.Structs.Warehouse.t) :: Shipstation.response_type
+  @spec create(warehouse :: Shipstation.Structs.Warehouse.t) :: Shipstation.Client.response_type
   def create(warehouse) do
-    uri = %{Shipstation.base_uri | path: "/warehouses/createwarehouse"}
-    Shipstation.call_api(:post, uri, warehouse)
+    uri = %{Shipstation.Client.base_uri | path: "/warehouses/createwarehouse"}
+    Shipstation.Client.call_api(:post, uri, warehouse)
   end
 
 end

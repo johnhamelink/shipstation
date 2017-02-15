@@ -15,19 +15,19 @@ defmodule Shipstation.Account do
       To request use of this specific endpoint, please submit a case to
       apisupport@shipstation.com
     """
-    @spec register(params :: Shipstation.Structs.Account.t) :: Shipstation.response_type
+    @spec register(params :: Shipstation.Structs.Account.t) :: Shipstation.Client.response_type
     def register(params = %Shipstation.Structs.Account{}) do
-      uri = %{Shipstation.base_uri | path: "/accounts/registeraccount"}
-      Shipstation.call_api(:post, uri, params)
+      uri = %{Shipstation.Client.base_uri | path: "/accounts/registeraccount"}
+      Shipstation.Client.call_api(:post, uri, params)
     end
 
     @doc ~s"""
     List all tags defined for this account
     """
-    @spec list_tags() :: Shipstation.response_type
+    @spec list_tags() :: Shipstation.Client.response_type
     def list_tags do
-      uri = %{Shipstation.base_uri | path: "/accounts/listtags"}
-      Shipstation.call_api(:get, uri, %{})
+      uri = %{Shipstation.Client.base_uri | path: "/accounts/listtags"}
+      Shipstation.Client.call_api(:get, uri, %{})
     end
 
 end

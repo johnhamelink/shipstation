@@ -6,10 +6,10 @@ defmodule Shipstation.Webhook do
   @doc ~s"""
   Retrieves a list of registered webhooks for the account
   """
-  @spec list() :: Shipstation.response_type
+  @spec list() :: Shipstation.Client.response_type
   def list() do
-    uri = %{Shipstation.base_uri | path: "/webhooks"}
-    Shipstation.call_api(:get, uri, %{})
+    uri = %{Shipstation.Client.base_uri | path: "/webhooks"}
+    Shipstation.Client.call_api(:get, uri, %{})
   end
 
   @doc ~s"""
@@ -22,19 +22,19 @@ defmodule Shipstation.Webhook do
   object](https://www.shipstation.com/developer-api/#/reference/model-webhook)
   in the body.
   """
-  @spec subscribe(webhook :: Shipstation.Structs.Webhook.t) :: Shipstation.response_type
+  @spec subscribe(webhook :: Shipstation.Structs.Webhook.t) :: Shipstation.Client.response_type
   def subscribe(webhook) do
-    uri = %{Shipstation.base_uri | path: "/webhooks/subscribe"}
-    Shipstation.call_api(:post, uri, webhook)
+    uri = %{Shipstation.Client.base_uri | path: "/webhooks/subscribe"}
+    Shipstation.Client.call_api(:post, uri, webhook)
   end
 
   @doc ~s"""
   Unsubscribes from a certain webhook.
   """
-  @spec unsubscribe(webhook_id :: integer) :: Shipstation.response_type
+  @spec unsubscribe(webhook_id :: integer) :: Shipstation.Client.response_type
   def unsubscribe(webhook_id) do
-    uri = %{Shipstation.base_uri | path: "/webhooks/#{webhook_id}"}
-    Shipstation.call_api(:delete, uri, %{})
+    uri = %{Shipstation.Client.base_uri | path: "/webhooks/#{webhook_id}"}
+    Shipstation.Client.call_api(:delete, uri, %{})
   end
 
 end

@@ -5,10 +5,10 @@ defmodule Shipstation.User do
   @doc ~s"""
   List all users
   """
-  @spec list(show_inactive :: boolean) :: Shipstation.response_type
+  @spec list(show_inactive :: boolean) :: Shipstation.Client.response_type
   def list(show_inactive) do
-    uri = %{Shipstation.base_uri | path: "/users"}
-    Shipstation.call_api(:get, uri, %{showInactive: show_inactive})
+    uri = %{Shipstation.Client.base_uri | path: "/users"}
+    Shipstation.Client.call_api(:get, uri, %{showInactive: show_inactive})
   end
 
 end
