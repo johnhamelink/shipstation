@@ -7,12 +7,13 @@ defmodule Shipstation.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps(),
      preferred_cli_env: [
        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test
      ],
-
+     deps: deps(),
+     package: package(),
      name: "Shipstation",
+     description: "An elixir client library for shipstation",
      source_url: "https://github.com/johnhamelink/shipstation",
      homepage_url: "https://hexdocs.pm/shipstation",
      docs: [
@@ -23,27 +24,28 @@ defmodule Shipstation.Mixfile do
     ]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
     [applications: applications() ++ applications(Mix.env)]
   end
 
-  def applications, do: [:logger, :httpoison, :poison]
-  def applications(:test), do: [:exvcr, :credo]
-  def applications(:dev), do: [:credo, :dialyxir, :ex_doc, :eliver]
-  def applications(_), do: []
+  defp applications, do: [:logger, :httpoison, :poison]
+  defp applications(:test), do: [:exvcr, :credo]
+  defp applications(:dev), do: [:credo, :dialyxir, :ex_doc, :eliver]
+  defp applications(_), do: []
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
+  defp package do
+    [
+      name: :shipstation,
+      files: ["lib", "config", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["John Hamelink"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/johnhamelink/shipstation",
+        "Docs"   => "https://hexdocs.pm/shipstation"
+      }
+    ]
+  end
+
   defp deps do
     [
       {:httpoison, "~> 0.11.0"},
