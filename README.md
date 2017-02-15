@@ -18,7 +18,6 @@ An API client library for [Shipstation](https://shipstation.com).
  - [x] Add authentication layer for use against the actual API
  - [x] Configure base URL to connect to (for test/staging/production environments)
  - [ ] Deserialize JSON output into Model structs
- - [ ] Handle throttling and respect exponential backoff
 
 ## Installation
 
