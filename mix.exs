@@ -10,6 +10,15 @@ defmodule Shipstation.Mixfile do
      deps: deps(),
      preferred_cli_env: [
        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test
+     ],
+
+     name: "Shipstation",
+     source_url: "https://github.com/johnhamelink/shipstation",
+     homepage_url: "https://hexdocs.pm/shipstation",
+     docs: [
+       main: "Shipstation",
+       logo: "misc/logo.png",
+       extras: ["README.md"]
      ]
     ]
   end
@@ -23,7 +32,7 @@ defmodule Shipstation.Mixfile do
 
   def applications, do: [:logger, :httpoison, :poison]
   def applications(:test), do: [:exvcr, :credo]
-  def applications(:dev), do: [:credo, :dialyxir]
+  def applications(:dev), do: [:credo, :dialyxir, :ex_doc]
   def applications(_), do: []
 
   # Dependencies can be Hex packages:
@@ -41,7 +50,8 @@ defmodule Shipstation.Mixfile do
       {:poison, "~> 3.1"},
       {:exvcr, "~> 0.8", only: :test},
       {:credo, "~> 0.3", only: [:dev, :test]},
-      {:dialyxir, "~> 0.4", only: [:dev], runtime: false}
+      {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
+      {:ex_doc, "~> 0.14", only: :dev}
     ]
   end
 end
