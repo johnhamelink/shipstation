@@ -8,3 +8,7 @@ config :shipstation,
     api_key: nil,
     api_secret: nil
   }
+
+config :logger, :console,
+  format: "$time $metadata[$level] $levelpad$message\n",
+  metadata: [:module]
