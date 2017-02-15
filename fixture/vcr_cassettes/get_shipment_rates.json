@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"weight\":{\"value\":3,\"units\":\"ounces\"},\"toState\":\"DC\",\"toPostalCode\":\"20500\",\"toCountry\":\"US\",\"toCity\":\"Washington\",\"serviceCode\":null,\"residential\":false,\"packageCode\":null,\"fromPostalCode\":\"78703\",\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"confirmation\":\"delivery\",\"carrierCode\":\"fedex\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/shipments/getrates"
+    },
+    "response": {
+      "body": "[\n    {\n    \"serviceName\": \"FedEx First Overnight®\",\n    \"serviceCode\": \"fedex_first_overnight\",\n    \"shipmentCost\": 87.8,\n    \"otherCost\": 2.63\n    },\n    {\n    \"serviceName\": \"FedEx Priority Overnight®\",\n    \"serviceCode\": \"fedex_priority_overnight\",\n    \"shipmentCost\": 50.23,\n    \"otherCost\": 1.51\n    },\n    {\n    \"serviceName\": \"FedEx Standard Overnight®\",\n    \"serviceCode\": \"fedex_standard_overnight\",\n    \"shipmentCost\": 46.96,\n    \"otherCost\": 1.41\n    },\n    {\n    \"serviceName\": \"FedEx 2Day® A.M.\",\n    \"serviceCode\": \"fedex_2day_am\",\n    \"shipmentCost\": 23.04,\n    \"otherCost\": 0.69\n    },\n    {\n    \"serviceName\": \"FedEx 2Day®\",\n    \"serviceCode\": \"fedex_2day\",\n    \"shipmentCost\": 20.03,\n    \"otherCost\": 0.6\n    },\n    {\n    \"serviceName\": \"FedEx Express Saver®\",\n    \"serviceCode\": \"fedex_express_saver\",\n    \"shipmentCost\": 14.28,\n    \"otherCost\": 0.43\n    },\n    {\n    \"serviceName\": \"FedEx Ground®\",\n    \"serviceCode\": \"fedex_ground\",\n    \"shipmentCost\": 8.25,\n    \"otherCost\": 0.33\n    }\n]",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "104",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3b15921e5d71900a40d62",
+        "Content-Length": "1017",
+        "Date": "Wed, 15 Feb 2017 01:39:37 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
