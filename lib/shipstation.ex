@@ -13,10 +13,17 @@ defmodule Shipstation do
   require Logger
 
   @default_headers [{"Accept", "application/json"}]
+  @type response_type :: {atom, map}
 
   def base_uri,
   do: URI.parse(Application.get_env(:shipstation, :base_uri))
 
+  @doc ~s"""
+  This function decides if there is enough data to build a Basic Authentication
+  header to add into the request. This is useful because it will attempt to make
+  the request without the header if there isn't enough data. You might want to do
+  this if you are wanting to create a new account through the API.
+  """
   def auth do
     case Application.get_env(:shipstation, :auth) do
       %{api_key: nil} -> []
@@ -27,8 +34,11 @@ defmodule Shipstation do
     end
   end
 
-  @type response_type :: {atom, map}
-
+  @doc ~s"""
+  This is the function that calls the API on behalf of the rest of the codebase.
+  It will compile the component pieces of the request and add in authentication
+  information when necessary.
+  """
   @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), custom_headers :: list(map)) :: response_type
   def call_api(verb, uri = %URI{}, body, custom_headers \\ []) do
 
