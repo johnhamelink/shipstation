@@ -16,6 +16,7 @@ defmodule Shipstation.Warehouse do
   @doc ~s"""
   Retrieves a list of your Ship From Locations (formerly known as warehouses).
   """
+  @spec list() :: Shipstation.response_type
   def list() do
     uri = %{Shipstation.base_uri | path: "/warehouses"}
     Shipstation.call_api(:get, uri, %{})

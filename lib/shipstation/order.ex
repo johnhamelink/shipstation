@@ -61,7 +61,7 @@ defmodule Shipstation.Order do
   @doc ~s"""
   List orders with filter parameters
   """
-  @spec list(order_filter :: Shipstation.Structs.OrderFilter) :: Shipstation.response_type
+  @spec list(order_filter :: Shipstation.Structs.OrderFilter.t) :: Shipstation.response_type
   def list(params = %Shipstation.Structs.OrderFilter{}) do
     uri = %{Shipstation.base_uri | path: "/orders"}
     Shipstation.call_api(:get, uri, params)

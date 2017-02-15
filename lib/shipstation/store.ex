@@ -24,7 +24,7 @@ defmodule Shipstation.Store do
   @doc ~s"""
   Deactivates the specified store
   """
-  @spec deactivate(store_id :: integer) :: ShipStation.response_type
+  @spec deactivate(store_id :: integer) :: Shipstation.response_type
   def deactivate(store_id) do
     uri = %{Shipstation.base_uri | path: "/stores/deactivate"}
     Shipstation.call_api(:post, uri, %{storeId: store_id})
@@ -33,7 +33,7 @@ defmodule Shipstation.Store do
   @doc ~s"""
   Reactivates the specified store
   """
-  @spec reactivate(store_id :: integer) :: ShipStation.response_type
+  @spec reactivate(store_id :: integer) :: Shipstation.response_type
   def reactivate(store_id) do
     uri = %{Shipstation.base_uri | path: "/stores/reactivate"}
     Shipstation.call_api(:post, uri, %{storeId: store_id})
