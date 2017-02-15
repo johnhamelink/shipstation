@@ -12,18 +12,32 @@ defmodule Shipstation do
   use HTTPoison.Base
   require Logger
 
-  #@base_uri %URI{scheme: "https", host: "ssapi.shipstation.com"}
-  @base_uri %URI{scheme: "https", host: "private-anon-ab6eb750a3-shipstation.apiary-mock.com"}
   @default_headers [{"Accept", "application/json"}]
 
   def base_uri,
-  do: @base_uri
+  do: URI.parse(Application.get_env(:shipstation, :base_uri))
+
+  def auth do
+    case Application.get_env(:shipstation, :auth) do
+      %{api_key: nil} -> []
+      %{api_secret: nil} -> []
+      %{api_key: key, api_secret: secret} ->
+        [{:basic_auth, {key, secret}}]
+      _ -> []
+    end
+  end
 
   @type response_type :: {atom, map}
 
-  @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), headers :: list(map)) :: response_type
-  def call_api(verb, uri = %URI{}, body, headers \\ []) do
-    case request(verb, uri, Poison.encode!(body), @default_headers ++ headers) do
+  @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), custom_headers :: list(map)) :: response_type
+  def call_api(verb, uri = %URI{}, body, custom_headers \\ []) do
+
+    # Build up final HTTP request to be sent to the API
+    payload = Poison.encode!(body)
+    headers = @default_headers ++ custom_headers
+    options = [] ++ auth()
+
+    case request(verb, uri, payload, headers, options) do
       {:ok, resp = %{body: ""}} ->
         %{status_code: resp.status_code}
       {:ok, resp = %{body: _}} ->
