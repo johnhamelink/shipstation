@@ -8,4 +8,16 @@ defmodule Shipstation do
     product with Shipstation's [publicly accessible
     API](http://www.shipstation.com/developer-api/).
   """
+  use Application
+  import Supervisor.Spec
+
+  @spec start(any, any) :: any
+  def start(_type, _args) do
+    children = [
+      worker(Shipstation.RequestLimit, [])
+    ]
+
+    Supervisor.start_link(children, strategy: :one_for_one)
+  end
+
 end

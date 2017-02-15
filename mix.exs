@@ -25,10 +25,13 @@ defmodule Shipstation.Mixfile do
   end
 
   def application do
-    [applications: applications() ++ applications(Mix.env)]
+    [
+      applications: applications() ++ applications(Mix.env),
+      mod: {Shipstation, []}
+    ]
   end
 
-  defp applications, do: [:logger, :httpoison, :poison]
+  defp applications, do: [:logger, :httpoison, :poison, :timex]
   defp applications(:test), do: [:exvcr, :credo]
   defp applications(:dev), do: [:credo, :dialyxir, :ex_doc, :eliver]
   defp applications(_), do: []
@@ -54,7 +57,8 @@ defmodule Shipstation.Mixfile do
       {:credo, "~> 0.3", only: [:dev, :test]},
       {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:eliver, "~> 1.0.0", only: :dev}
+      {:eliver, "~> 1.0.0", only: :dev},
+      {:timex, "~> 3.1"}
     ]
   end
 end

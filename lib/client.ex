@@ -50,20 +50,28 @@ defmodule Shipstation.Client do
   """
   @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), custom_headers :: list(map)) :: response_type
   def call_api(verb, uri = %URI{}, body, custom_headers \\ []) do
+    # Backoff for as long as the API asks us to.
+    if Shipstation.RequestLimit.should_request?,
+    do: Shipstation.RequestLimit.backoff
 
     # Build up final HTTP request to be sent to the API
     payload = Poison.encode!(body)
     headers = default_headers() ++ custom_headers
     options = [] ++ auth()
+    resp = request(verb, uri, payload, headers, options)
 
-    case request(verb, uri, payload, headers, options) do
-      {:ok, resp = %{body: ""}} ->
-        %{status_code: resp.status_code}
-      {:ok, resp = %{body: _}} ->
-        return_json(resp)
-      out -> out
-    end
+    Shipstation.RequestLimit.set_api_rate(resp)
+    handle_response(resp)
   end
+
+  defp handle_response({:ok, resp = %{body: ""}}),
+  do: %{status_code: resp.status_code}
+
+  defp handle_response({:ok, resp = %{body: _}}),
+  do: return_json(resp)
+
+  defp handle_response(resp),
+  do: resp
 
   defp return_json(resp) do
     case Poison.decode(resp.body) do
