@@ -11,7 +11,7 @@ An API client library for [Shipstation](https://shipstation.com).
 
 ### Todo (PRs welcome):
 
- - [ ] Finish building out API
+ - [x] Finish building out API
  - [ ] Configure base URL to connect to (for test/staging/production environments)
  - [ ] Create Model structs for each expected output
  - [ ] Handle throttling and respect exponential backoff
