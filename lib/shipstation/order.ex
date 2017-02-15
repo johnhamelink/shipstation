@@ -2,6 +2,33 @@ defmodule Shipstation.Order do
   @moduledoc ~s"""
   Manage orders on your account.
   """
+  @doc ~s"""
+  If the orderKey is specified, the method becomes idempotent and the existing
+  order with that key will be updated. Note: Only orders in an open status in
+  ShipStation (awaiting_payment,awaiting_shipment, and on_hold) can be updated
+  through this method. cancelled and shipped are locked from modification
+  through the API.
+  """
+  @spec upsert(order :: Shipstation.Structs.Order.t) :: Shipstation.response_type
+  def upsert(order = %Shipstation.Structs.Order{}) do
+    uri = %{Shipstation.base_uri | path: "/orders/createorder"}
+    Shipstation.call_api(:post, uri, order)
+  end
+
+  @doc ~s"""
+  This endpoint can be used to create or update multiple orders in one request.
+  If the orderKey is specified in an order, the existing order with that key
+  will be updated.
+
+  Note: Only orders in an open status in ShipStation (`awaiting_payment`,
+  `awaiting_shipment`, and `on_hold`) can be updated through this method.
+  cancelled and shipped are locked from modification through the API.
+  """
+  @spec upsert(orders :: [Shipstation.Structs.Order.t]) :: Shipstation.response_type
+  def upsert(orders) when is_list(orders) do
+    uri = %{Shipstation.base_uri | path: "/orders/createorders"}
+    Shipstation.call_api(:post, uri, orders)
+  end
 
   @doc ~s"""
   Retrieves a single order from the database.
@@ -21,6 +48,26 @@ defmodule Shipstation.Order do
     uri = %{Shipstation.base_uri | path: "/orders/#{id}"}
     Shipstation.call_api(:delete, uri, %{})
   end
+
+  @doc ~s"""
+  List orders without parameters
+  """
+  @spec list() :: Shipstation.response_type
+  def list() do
+    uri = %{Shipstation.base_uri | path: "/orders"}
+    Shipstation.call_api(:get, uri, %{})
+  end
+
+  @doc ~s"""
+  List orders with filter parameters
+  """
+  @spec list(order_filter :: Shipstation.Structs.OrderFilter) :: Shipstation.response_type
+  def list(params = %Shipstation.Structs.OrderFilter{}) do
+    uri = %{Shipstation.base_uri | path: "/orders"}
+    Shipstation.call_api(:get, uri, params)
+  end
+
+  ###### TAGS
 
   @doc ~s"""
   List orders that match the specified status and tag ID.
@@ -49,6 +96,8 @@ defmodule Shipstation.Order do
     Shipstation.call_api(:post, uri, %{orderId: order_id, tagId: tag_id})
   end
 
+  ###### User Assignment
+
   @doc ~s"""
   Assigns a user to an order
   """
@@ -75,6 +124,8 @@ defmodule Shipstation.Order do
     Shipstation.call_api(:post, uri, %{orderIds: order_ids})
   end
 
+  ###### Shipping
+
   @doc ~s"""
   Creates a shipping label for a given order.
 
@@ -85,34 +136,6 @@ defmodule Shipstation.Order do
   def create_label(params = %Shipstation.Structs.Label{}) do
     uri = %{Shipstation.base_uri | path: "/orders/createlabelfororder"}
     Shipstation.call_api(:post, uri, params)
-  end
-
-  @doc ~s"""
-  If the orderKey is specified, the method becomes idempotent and the existing
-  order with that key will be updated. Note: Only orders in an open status in
-  ShipStation (awaiting_payment,awaiting_shipment, and on_hold) can be updated
-  through this method. cancelled and shipped are locked from modification
-  through the API.
-  """
-  @spec upsert_order(order :: Shipstation.Structs.Order.t) :: Shipstation.response_type
-  def upsert_order(order = %Shipstation.Structs.Order{}) do
-    uri = %{Shipstation.base_uri | path: "/orders/createorder"}
-    Shipstation.call_api(:post, uri, order)
-  end
-
-  @doc ~s"""
-  This endpoint can be used to create or update multiple orders in one request.
-  If the orderKey is specified in an order, the existing order with that key
-  will be updated.
-
-  Note: Only orders in an open status in ShipStation (`awaiting_payment`,
-  `awaiting_shipment`, and `on_hold`) can be updated through this method.
-  cancelled and shipped are locked from modification through the API.
-  """
-  @spec upsert_orders(orders :: [Shipstation.Structs.Order.t]) :: Shipstation.response_type
-  def upsert_orders(orders) when is_list(orders) do
-    uri = %{Shipstation.base_uri | path: "/orders/createorders"}
-    Shipstation.call_api(:post, uri, orders)
   end
 
   @doc ~s"""
@@ -134,24 +157,6 @@ defmodule Shipstation.Order do
   def restore_from_on_hold(order_id) do
     uri = %{Shipstation.base_uri | path: "/orders/restorefromhold"}
     Shipstation.call_api(:post, uri, %{orderId: order_id})
-  end
-
-  @doc ~s"""
-  List orders without parameters
-  """
-  @spec list() :: Shipstation.response_type
-  def list() do
-    uri = %{Shipstation.base_uri | path: "/orders"}
-    Shipstation.call_api(:get, uri, %{})
-  end
-
-  @doc ~s"""
-  List orders with filter parameters
-  """
-  @spec list(order_filter :: Shipstation.Structs.OrderFilter) :: Shipstation.response_type
-  def list(params = %Shipstation.Structs.OrderFilter{}) do
-    uri = %{Shipstation.base_uri | path: "/orders"}
-    Shipstation.call_api(:get, uri, params)
   end
 
   @doc ~s"""

@@ -191,7 +191,7 @@ defmodule Shipstation.OrderTest do
   test "Update an order", context do
     use_cassette "update_order" do
       params = %{ context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74" }
-      {:ok, %{body: body}} = resp = Shipstation.Order.upsert_order(params)
+      {:ok, %{body: body}} = resp = Shipstation.Order.upsert(params)
 
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["orderKey"]) == "0f6bec18-3e89-4881-83aa-f392d84f4c74"
@@ -201,7 +201,7 @@ defmodule Shipstation.OrderTest do
   test "Create Order", context do
     use_cassette "create_order" do
       params = %{ context[:order] | orderKey: nil }
-      {:ok, %{body: body}} = resp = Shipstation.Order.upsert_order(params)
+      {:ok, %{body: body}} = resp = Shipstation.Order.upsert(params)
 
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["orderKey"]) == "0f6bec18-3e89-4881-83aa-f392d84f4c74"
@@ -211,7 +211,7 @@ defmodule Shipstation.OrderTest do
   test "Update multiple orders", context do
     use_cassette "update_orders" do
       orders = [%{ context[:order] | orderKey: "0f6bec18-3e89-4881-83aa-f392d84f4c74" }]
-      {:ok, %{body: body}} = resp = Shipstation.Order.upsert_orders(orders)
+      {:ok, %{body: body}} = resp = Shipstation.Order.upsert(orders)
 
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["hasErrors"]) == false
@@ -222,7 +222,7 @@ defmodule Shipstation.OrderTest do
   test "Create multiple orders", context do
     use_cassette "create_orders" do
       orders = [%{ context[:order] | orderKey: nil }]
-      {:ok, %{body: body}} = resp = Shipstation.Order.upsert_orders(orders)
+      {:ok, %{body: body}} = resp = Shipstation.Order.upsert(orders)
 
       assert {:ok, %{status_code: 200}} = resp
       assert get_in(body, ["hasErrors"]) == false
