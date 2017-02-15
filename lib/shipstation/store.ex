@@ -3,8 +3,6 @@ defmodule Shipstation.Store do
   Manage Stores under your account
   """
 
-###### STORES
-
   @doc ~s"""
   Get a store by its ID
   """
@@ -41,8 +39,6 @@ defmodule Shipstation.Store do
     Shipstation.call_api(:post, uri, %{storeId: store_id})
   end
 
-###### MARKETPLACES
-
   @doc ~s"""
   Lists the marketplaces that can be integrated with ShipStation.
   """
@@ -51,8 +47,6 @@ defmodule Shipstation.Store do
     uri = %{Shipstation.base_uri | path: "/stores/marketplaces"}
     Shipstation.call_api(:get, uri, %{})
   end
-
-###### REFRESH
 
   @doc ~s"""
   Retrieves the refresh status of a given store.
