@@ -15,6 +15,7 @@ defmodule Shipstation do
   @default_headers [{"Accept", "application/json"}]
   @type response_type :: {atom, map}
 
+  @spec base_uri() :: URI.t
   def base_uri,
   do: URI.parse(Application.get_env(:shipstation, :base_uri))
 
@@ -24,6 +25,7 @@ defmodule Shipstation do
   the request without the header if there isn't enough data. You might want to do
   this if you are wanting to create a new account through the API.
   """
+  @spec auth() :: [{:basic_auth, {String.t, String.t}}] | []
   def auth do
     case Application.get_env(:shipstation, :auth) do
       %{api_key: nil} -> []
