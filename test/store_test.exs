@@ -9,15 +9,15 @@ defmodule Shipstation.StoreTest do
 
   test "Get Store" do
     use_cassette "store_get" do
-      {:ok, %{body: body}} = resp = Shipstation.Store.get(12345)
+      {:ok, %{body: body}} = resp = Shipstation.Store.get(12_345)
       assert {:ok, %{status_code: 200}} = resp
-      assert get_in(body, ["storeId"]) == 12345
+      assert get_in(body, ["storeId"]) == 12_345
     end
   end
 
   test "Deactivate Store" do
     use_cassette "store_deactivate" do
-      {:ok, %{body: body}} = resp = Shipstation.Store.deactivate(12345)
+      {:ok, %{body: body}} = resp = Shipstation.Store.deactivate(12_345)
       assert {:ok, %{status_code: 200}} = resp
       # This is an API bug!
       assert body == %{"message" => "The requested store has been reactivated.", "success" => "true"}
@@ -26,7 +26,7 @@ defmodule Shipstation.StoreTest do
 
   test "Reactivate Store" do
     use_cassette "store_reactivate" do
-      {:ok, %{body: body}} = resp = Shipstation.Store.reactivate(12345)
+      {:ok, %{body: body}} = resp = Shipstation.Store.reactivate(12_345)
       assert {:ok, %{status_code: 200}} = resp
       assert body == %{"message" => "The requested store has been reactivated.", "success" => "true"}
     end

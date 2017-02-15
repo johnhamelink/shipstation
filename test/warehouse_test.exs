@@ -28,7 +28,7 @@ defmodule Shipstation.WarehouseTest do
   test "Update Warehouse" do
     use_cassette "warehouse_update" do
       params = %Shipstation.Structs.Warehouse{
-        warehouseId: 12345,
+        warehouseId: 12_345,
         warehouseName: "API Ship From Location",
         originAddress: %Shipstation.Structs.Address{
           name: "API Warehouse",
@@ -92,7 +92,7 @@ defmodule Shipstation.WarehouseTest do
 
       {:ok, %{body: body}} = resp = Shipstation.Warehouse.create(params)
       assert {:ok, %{status_code: 200}} = resp
-      assert get_in(body, ["warehouseId"]) == 17977
+      assert get_in(body, ["warehouseId"]) == 17_977
     end
   end
 end
