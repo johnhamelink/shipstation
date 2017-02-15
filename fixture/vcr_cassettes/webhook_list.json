@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/webhooks"
+    },
+    "response": {
+      "body": "{\n    \"webhooks\": [\n        {\n            \"IsLabelAPIHook\": false,\n            \"WebHookID\": 123,\n            \"SellerID\": 100000,\n            \"StoreID\": 12345,\n            \"HookType\": \"ITEM_ORDER_NOTIFY\",\n            \"MessageFormat\": \"Json\",\n            \"Url\": \"http://example.endpoint/orders\",\n            \"Name\": \"My Order Webhook\",\n            \"BulkCopyBatchID\": null,\n            \"BulkCopyRecordID\": null,\n            \"Active\": true,\n            \"WebhookLogs\": [],\n            \"Seller\": null,\n            \"Store\": null\n        },\n        {\n            \"IsLabelAPIHook\": false,\n            \"WebHookID\": 456,\n            \"SellerID\": 100000,\n            \"StoreID\": 98765,\n            \"HookType\": \"SHIP_NOTIFY\",\n            \"MessageFormat\": \"Json\",\n            \"Url\": \"https://example.endpoint/shipment\",\n            \"Name\": \"My Shipment Webhook\",\n            \"BulkCopyBatchID\": null,\n            \"BulkCopyRecordID\": null,\n            \"Active\": true,\n            \"WebhookLogs\": [],\n            \"Seller\": null,\n            \"Store\": null\n        }\n    ]\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "118",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3c43921e5d71900a41928",
+        "Content-Length": "1052",
+        "Date": "Wed, 15 Feb 2017 03:00:09 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

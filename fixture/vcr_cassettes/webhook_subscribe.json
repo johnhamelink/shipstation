@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "{\"target_url\":\"http://someexamplewebhookurl.com/neworder\",\"store_id\":null,\"friendly_name\":\"My Webhook\",\"event\":\"ORDER_NOTIFY\"}",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/webhooks/subscribe"
+    },
+    "response": {
+      "body": "{\n    \"id\": 123456\n}",
+      "headers": {
+        "Server": "Cowboy",
+        "Connection": "keep-alive",
+        "X-Apiary-Ratelimit-Limit": "120",
+        "X-Apiary-Ratelimit-Remaining": "119",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
+        "Access-Control-Max-Age": "10",
+        "X-Apiary-Transaction-Id": "58a3c43997de731900839bcf",
+        "Content-Length": "20",
+        "Date": "Wed, 15 Feb 2017 03:00:09 GMT",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

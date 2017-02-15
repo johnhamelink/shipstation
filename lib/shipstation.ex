@@ -24,7 +24,9 @@ defmodule Shipstation do
   @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), headers :: list(map)) :: response_type
   def call_api(verb, uri = %URI{}, body, headers \\ []) do
     case request(verb, uri, Poison.encode!(body), @default_headers ++ headers) do
-      {:ok, resp} ->
+      {:ok, resp = %{body: ""}} ->
+        %{status_code: resp.status_code}
+      {:ok, resp = %{body: _}} ->
         return_json(resp)
       out -> out
     end
