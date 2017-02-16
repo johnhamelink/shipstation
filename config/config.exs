@@ -3,7 +3,12 @@
 use Mix.Config
 
 config :shipstation,
-  base_uri: "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com",
+  base_uri: "https://ssapi.shipstation.com",
+  headers: %{
+    limit: "X-Rate-Limit-Limit",
+    remaining: "X-Rate-Limit-Remaining",
+    reset: "X-Rate-Limit-Reset"
+  },
   auth: %{
     api_key: nil,
     api_secret: nil
@@ -12,3 +17,6 @@ config :shipstation,
 config :logger, :console,
   format: "$time $metadata[$level] $levelpad$message\n",
   metadata: [:module]
+
+
+import_config "#{Mix.env}.exs"
