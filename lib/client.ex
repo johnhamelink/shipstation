@@ -18,7 +18,7 @@ defmodule Shipstation.Client do
   def default_headers() do
     [
       {"Accept", "application/json"},
-      {"User-Agent", "shipstation-elixir-client/#{Shipstation.Mixfile.project[:version]}"}
+      {"User-Agent", "shipstation-elixir-client/#{Application.spec(:shipstation, :vsn)}"}
     ]
   end
 
