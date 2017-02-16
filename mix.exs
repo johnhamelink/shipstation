@@ -52,7 +52,7 @@ defmodule Shipstation.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.11.0"},
-      {:poison, "~> 3.1"},
+      {:poison, "~> 2.0"},
       {:exvcr, "~> 0.8", only: :test},
       {:credo, "~> 0.3", only: [:dev, :test]},
       {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
