@@ -14,7 +14,7 @@ Shipstation is an unofficial API client library for the [Shipstation](https://sh
 
 ### Features
  - [x] A complete API
- - [x] Completely unit tested
+ - [x] Every API endpoint has been unit tested
  - [x] Configurable API endpoints (for using Shipstation's Apiary endpoint in testing, for example).
  - [x] Automatically handles backpressure using a [backpressure Agent](https://github.com/johnhamelink/shipstation/blob/master/lib/request_limit.ex)
 
