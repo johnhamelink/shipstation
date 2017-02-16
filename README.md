@@ -39,4 +39,5 @@ The package can be installed as:
     ```
 
 #### Todo List:
+ - [ ] Provide a standard for handling dates in the correct format
  - [ ] Deserialize JSON output into Model structs
