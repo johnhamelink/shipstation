@@ -14,8 +14,8 @@ defmodule Shipstation.RequestLimit do
   use Timex
   require Logger
 
-  @default_duration 60
-  @default_requests_allowed 100
+  @default_duration 40
+  @default_requests_allowed 40
 
   def start_link do
     Logger.info "Booting up RequestLimit Agent"
