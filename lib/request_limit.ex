@@ -30,7 +30,15 @@ defmodule Shipstation.RequestLimit do
   @spec should_request?() :: boolean
   def should_request? do
     {_limit, remaining, reset} = Agent.get(__MODULE__, & &1)
-    remaining == 0 && (Timex.now < reset)
+    !(remaining == 0 && (Timex.now < reset))
+  end
+
+  @doc ~s"""
+  Return the current state
+  """
+  @spec state() :: {integer, integer, %DateTime{}}
+  def state do
+    Agent.get(__MODULE__, & &1)
   end
 
   @doc ~s"""
@@ -39,9 +47,9 @@ defmodule Shipstation.RequestLimit do
   @spec set_api_rate({atom, HTTPoison.Response.t}) :: any
   def set_api_rate({_, %HTTPoison.Response{headers: headers}}) do
     headers   = Enum.into(headers, %{})
-    limit     = Map.get(headers, "X-Apiary-Ratelimit-Limit", 100)
-    remaining = Map.get(headers, "X-Apiary-Ratelimit-Remaining", 100)
-    reset     = Map.get(headers, "X-Apiary-Ratelimit-Reset", 60)
+    {limit, _}     = Integer.parse(Map.get(headers, "X-Rate-Limit-Limit", "40"))
+    {remaining, _} = Integer.parse(Map.get(headers, "X-Rate-Limit-Remaining", "40"))
+    {reset, _}     = Integer.parse(Map.get(headers, "X-Rate-Limit-Reset", "40"))
 
     state = {limit, remaining, seconds_from_now(reset)}
     Agent.update(__MODULE__, fn _ -> state end)
@@ -52,12 +60,12 @@ defmodule Shipstation.RequestLimit do
   """
   @spec backoff() :: any
   def backoff() do
-    Logger.warn("Backing off Shipstation API...")
     {_limit, _remaining, reset} = Agent.get(__MODULE__, & &1)
 
-    reset
-    |> calculate_backoff_period
-    |> :timer.sleep
+    period = calculate_backoff_period(reset)
+    Logger.warn("Backing off Shipstation API for #{period}ms...")
+
+    :timer.sleep(period)
   end
 
   @spec calculate_backoff_period(future_time :: %DateTime{}) :: non_neg_integer

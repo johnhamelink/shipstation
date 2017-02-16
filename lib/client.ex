@@ -52,7 +52,7 @@ defmodule Shipstation.Client do
   @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), custom_headers :: list(map)) :: response_type
   def call_api(verb, uri = %URI{}, body, custom_headers \\ []) do
     # Backoff for as long as the API asks us to.
-    if Shipstation.RequestLimit.should_request?,
+    if !Shipstation.RequestLimit.should_request?,
     do: Shipstation.RequestLimit.backoff
 
     # Build up final HTTP request to be sent to the API
