@@ -8,7 +8,7 @@
 
 ---
 
-### This library is now ready to undergo testing in staging & production environments, but it is **not** production ready.
+### This library is now ready to undergo testing in staging & production environments, but it is *not* production ready.
 
 An API client library for [Shipstation](https://shipstation.com).
 
