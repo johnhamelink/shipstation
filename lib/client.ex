@@ -38,7 +38,8 @@ defmodule Shipstation.Client do
       %{api_key: nil} -> []
       %{api_secret: nil} -> []
       %{api_key: key, api_secret: secret} ->
-        [{:basic_auth, {key, secret}}]
+        hash = Base.encode64("#{key}:#{secret}")
+        [{"Authorization", "Basic #{hash}"}]
       _ -> []
     end
   end
@@ -56,9 +57,8 @@ defmodule Shipstation.Client do
 
     # Build up final HTTP request to be sent to the API
     payload = Poison.encode!(body)
-    headers = default_headers() ++ custom_headers
-    options = [] ++ auth()
-    resp = request(verb, uri, payload, headers, options)
+    headers = default_headers() ++ auth() ++ custom_headers
+    resp = request(verb, uri, payload, headers)
 
     Shipstation.RequestLimit.set_api_rate(resp)
     handle_response(resp)
