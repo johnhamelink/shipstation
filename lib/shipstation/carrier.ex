@@ -4,7 +4,7 @@ defmodule Shipstation.Carrier do
   """
 
   @doc ~s"""
-    Lists all shipping providers connected to this account.
+  Lists all shipping providers connected to this account.
   """
   @spec list() :: Shipstation.Client.response_type
   def list() do
@@ -13,8 +13,8 @@ defmodule Shipstation.Carrier do
   end
 
   @doc ~s"""
-    Retrieves the shipping carrier account details for the specified
-    carrierCode. Use this method to determine a carrier's account balance.
+  Retrieves the shipping carrier account details for the specified
+  carrierCode. Use this method to determine a carrier's account balance.
   """
   @spec get(carrier :: String.t) :: Shipstation.Client.response_type
   def get(carrier) do
