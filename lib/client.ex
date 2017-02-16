@@ -76,7 +76,7 @@ defmodule Shipstation.Client do
   defp return_json(resp) do
     case Poison.decode(resp.body) do
       {:ok, body} ->
-        {:ok, %{Map.from_struct(resp) | body: body}}
+        {:ok, %{body: body, status_code: resp.status_code}}
       {:error, _err} ->
         Logger.error("Could not parse JSON: #{resp.body}")
         {:error, "Could not parse JSON: #{resp.body}"}
