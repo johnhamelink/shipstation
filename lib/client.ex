@@ -11,6 +11,7 @@ defmodule Shipstation.Client do
 
   use HTTPoison.Base
   require Logger
+  alias Shipstation.Serializer
 
   @type response_type :: {atom, map}
 
@@ -57,7 +58,11 @@ defmodule Shipstation.Client do
     do: Shipstation.RequestLimit.backoff
 
     # Build up final HTTP request to be sent to the API
-    payload = Poison.encode!(body)
+    payload =
+      body
+      |> Serializer.deep_consolidate
+      |> IO.inspect
+      |> Poison.encode!
     headers = default_headers() ++ auth() ++ custom_headers
     resp = request(verb, uri, payload, headers)
 
