@@ -54,7 +54,7 @@ defmodule Shipstation.Mixfile do
       {:httpoison, "~> 0.11.0"},
       {:poison, "~> 2.0"},
       {:exvcr, "~> 0.8", only: :test},
-      {:credo, "~> 0.3", only: [:dev, :test]},
+      {:credo, "~> 0.7", only: [:dev, :test]},
       {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
       {:eliver, "~> 1.0.0", only: :dev},
