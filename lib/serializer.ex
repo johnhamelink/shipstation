@@ -3,6 +3,9 @@ defmodule Shipstation.Serializer do
   This function is used to strip out nils in deeply-nested data.
   """
 
+  def deep_consolidate(body = %Shipstation.Structs.OrderFilter{}),
+  do: do_deep_consolidate(body)
+
   def deep_consolidate(body = %Shipstation.Structs.Order{}),
   do: do_deep_consolidate(body)
 

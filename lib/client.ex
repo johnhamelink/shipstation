@@ -46,13 +46,36 @@ defmodule Shipstation.Client do
     end
   end
 
+  def call_api(verb, uri, body),
+  do: call_api(verb, uri, body, [])
+
   @doc ~s"""
   This is the function that calls the API on behalf of the rest of the codebase.
   It will compile the component pieces of the request and add in authentication
   information when necessary.
   """
   @spec call_api(verb :: atom, uri :: URI.t, body :: map | list(map), custom_headers :: list(map)) :: response_type
-  def call_api(verb, uri = %URI{}, body, custom_headers \\ []) do
+  def call_api(:get, uri = %URI{}, body, custom_headers) do
+    # Backoff for as long as the API asks us to.
+    if !Shipstation.RequestLimit.should_request?,
+      do: Shipstation.RequestLimit.backoff
+
+    headers = default_headers() ++ auth() ++ custom_headers
+
+    params =
+      body
+      |> Serializer.deep_consolidate
+      |> URI.encode_query
+
+    uri = %{uri | query: params} |> URI.parse
+
+    resp = get(uri, headers)
+
+    Shipstation.RequestLimit.set_api_rate(resp)
+    handle_response(resp)
+  end
+
+  def call_api(verb, uri = %URI{}, body, custom_headers) do
     # Backoff for as long as the API asks us to.
     if !Shipstation.RequestLimit.should_request?,
     do: Shipstation.RequestLimit.backoff
@@ -61,9 +84,9 @@ defmodule Shipstation.Client do
     payload =
       body
       |> Serializer.deep_consolidate
-      |> IO.inspect
       |> Poison.encode!
     headers = default_headers() ++ auth() ++ custom_headers
+
     resp = request(verb, uri, payload, headers)
 
     Shipstation.RequestLimit.set_api_rate(resp)
