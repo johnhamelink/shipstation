@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/customers/12345678"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/customers/12345678?"
     },
     "response": {
       "body": "    {\n      \"customerId\": 12345678,\n      \"createDate\": \"2014-11-18T10:33:01.1900000\",\n      \"modifyDate\": \"2014-11-18T10:33:01.1900000\",\n      \"name\": \"Cam Newton\",\n      \"company\": \"Test Company\",\n      \"street1\": \"123 War Eagle Lane\",\n      \"street2\": \"\",\n      \"city\": \"Auburn\",\n      \"state\": \"AL\",\n      \"postalCode\": \"36830\",\n      \"countryCode\": \"US\",\n      \"phone\": \"555-555-5555\",\n      \"email\": \"supermancam@example.com\",\n      \"addressVerified\": \"Verified\",\n      \"marketplaceUsernames\": [\n        {\n          \"customerUserId\": 67195020,\n          \"customerId\": 12345678,\n          \"createDate\": \"2015-04-27T12:35:03.8300000\",\n          \"modifyDate\": \"2015-05-14T08:16:15.2700000\",\n          \"marketplaceId\": 0,\n          \"marketplace\": \"ShipStation\",\n          \"username\": \"camtheman@gmail.com\"\n        },\n        {\n          \"customerUserId\": 37568588,\n          \"customerId\": 12345678,\n          \"createDate\": \"2014-11-18T10:33:01.1970000\",\n          \"modifyDate\": \"2014-11-18T10:33:01.1970000\",\n          \"marketplaceId\": 36,\n          \"marketplace\": \"WooCommerce\",\n          \"username\": \"supercam@example.com\"\n        },\n        {\n          \"customerUserId\": 46038940,\n          \"customerId\": 12345678,\n          \"createDate\": null,\n          \"modifyDate\": null,\n          \"marketplaceId\": 67,\n          \"marketplace\": \"TradeGecko\",\n          \"username\": \"camtheman@gmail.com\"\n        }\n      ],\n      \"tags\": [\n                {\n                  \"tagId\": 1234,\n                  \"name\": \"Expedited\"\n                },\n                {\n                  \"tagId\": 9725,\n                  \"name\": \"00 BULK ORDERED\"\n                }\n              ]\n    }",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "112",
+        "X-Apiary-Ratelimit-Remaining": "70",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a2563467fc911900b81466",
+        "X-Apiary-Transaction-Id": "58f09f5629fc64190060b12b",
         "Content-Length": "1671",
-        "Date": "Tue, 14 Feb 2017 00:58:28 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:18 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

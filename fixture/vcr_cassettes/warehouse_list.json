@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/warehouses"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/warehouses?"
     },
     "response": {
       "body": "[\n  {\n    \"warehouseId\": 17977,\n    \"warehouseName\": \"Main warehouse\",\n    \"originAddress\": {\n      \"name\": \"Spring warehouse\",\n      \"company\": \"\",\n      \"street1\": \"123 S SPRING RD  \",\n      \"street2\": \"\",\n      \"street3\": \"\",\n      \"city\": \"Elmurst\",\n      \"state\": \"IL\",\n      \"postalCode\": \"60126\",\n      \"country\": \"US\",\n      \"phone\": \"5121112222\",\n      \"residential\": false\n    },\n    \"returnAddress\": {\n      \"name\": \"Chicago House\",\n      \"company\": \"\",\n      \"street1\": \"123 S SPRING RD  \",\n      \"street2\": \"\",\n      \"street3\": \"\",\n      \"city\": \"Elmurst\",\n      \"state\": \"IL\",\n      \"postalCode\": \"60126\",\n      \"country\": \"US\",\n      \"phone\": \"5121112222\",\n      \"residential\": null\n    },\n    \"createDate\": \"2014-10-21T08:11:43.8800000\",\n    \"isDefault\": true\n  },\n  {\n    \"warehouseId\": 14265,\n    \"warehouseName\": \"Austin\",\n    \"originAddress\": {\n      \"name\": \"Austin\",\n      \"company\": \"ShipStation\",\n      \"street1\": \"2815 Exposition Blvd\",\n      \"street2\": \"\",\n      \"street3\": \"\",\n      \"city\": \"Austin\",\n      \"state\": \"TX\",\n      \"postalCode\": \"78703\",\n      \"country\": \"US\",\n      \"phone\": \"5124445555\",\n      \"residential\": false\n    },\n    \"returnAddress\": {\n      \"name\": \"ShipStation\",\n      \"company\": \"ShipStation\",\n      \"street1\": \"2815 Exposition Blvd\",\n      \"street2\": \"\",\n      \"street3\": \"\",\n      \"city\": \"Austin\",\n      \"state\": \"TX\",\n      \"postalCode\": \"78703\",\n      \"country\": \"US\",\n      \"phone\": \"5124445555\",\n      \"residential\": null\n    },\n    \"createDate\": \"2014-05-27T09:54:29.9600000\",\n    \"isDefault\": false\n  }\n]",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "87",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3c188cc0da71900577eb3",
+        "X-Apiary-Transaction-Id": "58f09f519f59861900524e5c",
         "Content-Length": "1567",
-        "Date": "Wed, 15 Feb 2017 02:48:40 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:13 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

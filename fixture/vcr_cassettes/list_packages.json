@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{\"carrierCode\":\"fedex\"}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/listpackages"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/listpackages?carrierCode=fedex"
     },
     "response": {
       "body": "[\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"cubic\",\n    \"name\": \"Cubic\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"dvd_flat_rate_box\",\n    \"name\": \"DVD Flat Rate Box\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"flat_rate_envelope\",\n    \"name\": \"Flat Rate Envelope\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"flat_rate_legal_envelope\",\n    \"name\": \"Flat Rate Legal Envelope\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"flat_rate_padded_envelope\",\n    \"name\": \"Flat Rate Padded Envelope\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"large_envelope_or_flat\",\n    \"name\": \"Large Envelope or Flat\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"large_flat_rate_box\",\n    \"name\": \"Large Flat Rate Box\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"large_package\",\n    \"name\": \"Large Package (any side > 12\\\")\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"large_video_flat_rate_box\",\n    \"name\": \"Large Video Flat Rate Box\",\n    \"domestic\": false,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"letter\",\n    \"name\": \"Letter\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"medium_flat_rate_box\",\n    \"name\": \"Medium Flat Rate Box\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"package\",\n    \"name\": \"Package\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"regional_rate_box_a\",\n    \"name\": \"Regional Rate Box A\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"regional_rate_box_b\",\n    \"name\": \"Regional Rate Box B\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"regional_rate_box_c\",\n    \"name\": \"Regional Rate Box C\",\n    \"domestic\": true,\n    \"international\": false\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"small_flat_rate_box\",\n    \"name\": \"Small Flat Rate Box\",\n    \"domestic\": true,\n    \"international\": true\n  },\n  {\n    \"carrierCode\": \"express_1\",\n    \"code\": \"thick_envelope\",\n    \"name\": \"Thick Envelope\",\n    \"domestic\": true,\n    \"international\": true\n  }\n]",
@@ -21,9 +23,9 @@
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a256ef3faea91900a2f5e8",
+        "X-Apiary-Transaction-Id": "58f09f469f59861900524e50",
         "Content-Length": "2665",
-        "Date": "Tue, 14 Feb 2017 01:01:35 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:02 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

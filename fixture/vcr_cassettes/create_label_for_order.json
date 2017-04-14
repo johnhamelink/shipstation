@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"weight\":{\"value\":2,\"units\":\"pounds\"},\"testLabel\":false,\"shipDate\":\"2014-04-03\",\"serviceCode\":\"fedex_2day\",\"packageCode\":\"package\",\"orderId\":93348442,\"internationalOptions\":null,\"insuranceOptions\":null,\"dimensions\":null,\"confirmation\":null,\"carrierCode\":\"fedex\",\"advancedOptions\":null}",
+      "body": "{\"weight\":{\"value\":2,\"units\":\"pounds\"},\"testLabel\":false,\"shipDate\":\"2014-04-03\",\"serviceCode\":\"fedex_2day\",\"packageCode\":\"package\",\"orderId\":93348442,\"carrierCode\":\"fedex\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "110",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a376d93faea91900a41fea",
+        "X-Apiary-Transaction-Id": "58f09f498ce9c21900bae952",
         "Content-Length": "539",
-        "Date": "Tue, 14 Feb 2017 21:30:01 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:05 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

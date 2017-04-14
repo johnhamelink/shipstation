@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{\"storeId\":12345}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/getrefreshstatus"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/stores/getrefreshstatus?storeId=12345"
     },
     "response": {
       "body": "{\n  \"storeId\": 12345,\n  \"refreshStatusId\": 2,\n  \"refreshStatus\": \"Updating orders\",\n  \"lastRefreshAttempt\": \"8-13-2014\",\n  \"refreshDate\": \"8-13-2014\"\n}",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "96",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3b6a8cc0da71900577806",
+        "X-Apiary-Transaction-Id": "58f09f4e29fc64190060b11d",
         "Content-Length": "151",
-        "Date": "Wed, 15 Feb 2017 02:02:16 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:10 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

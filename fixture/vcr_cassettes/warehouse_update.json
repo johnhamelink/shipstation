@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":12345,\"returnAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"originAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"isDefault\":true,\"createDate\":\"2015-07-02T08:38:31.4870000\"}",
+      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":12345,\"returnAddress\":{\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\"},\"originAddress\":{\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\"},\"isDefault\":true,\"createDate\":\"2015-07-02T08:38:31.4870000\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "put",
       "options": [],
@@ -16,15 +18,15 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "90",
         "Content-Type": "application/json",
         "Authorization": "< Enter your Basic Authorization string here >",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3c05821e5d71900a416c7",
+        "X-Apiary-Transaction-Id": "58f09f509f59861900524e5b",
         "Content-Length": "888",
-        "Date": "Wed, 15 Feb 2017 02:43:36 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:12 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

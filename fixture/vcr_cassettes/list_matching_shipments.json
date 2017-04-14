@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{\"voidDateStart\":\"2015-01-01 00:00:00\",\"voidDateEnd\":\"2015-01-08 00:00:00\",\"trackingNumber\":null,\"sortDir\":\"ASC\",\"sortBy\":\"ShipDate\",\"shipDateStart\":\"2015-01-01\",\"shipDateEnd\":\"2015-01-08\",\"serviceCode\":null,\"recipientName\":null,\"recipientCountryCode\":null,\"pageSize\":100,\"page\":1,\"orderNumber\":null,\"orderId\":null,\"includeShipmentItems\":false,\"createDateStart\":\"2015-01-01 00:00:00\",\"createDateEnd\":\"2015-01-08 00:00:00\",\"carrierCode\":null}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/shipments"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/shipments?createDateEnd=2015-01-08+00%3A00%3A00&createDateStart=2015-01-01+00%3A00%3A00&includeShipmentItems=false&page=1&pageSize=100&shipDateEnd=2015-01-08&shipDateStart=2015-01-01&sortBy=ShipDate&sortDir=ASC&voidDateEnd=2015-01-08+00%3A00%3A00&voidDateStart=2015-01-01+00%3A00%3A00"
     },
     "response": {
       "body": "{\n  \"shipments\": [\n    {\n      \"shipmentId\": 33974374,\n      \"orderId\": 43945660,\n      \"userId\": \"123456AB-ab12-3c4d-5e67-89f1abc1defa\",\n      \"orderNumber\": \"100038-1\",\n      \"createDate\": \"2014-10-03T06:51:33.6270000\",\n      \"shipDate\": \"2014-10-03\",\n      \"shipmentCost\": 1.93,\n      \"insuranceCost\": 0,\n      \"trackingNumber\": \"9400111899561704681189\",\n      \"isReturnLabel\": false,\n      \"batchNumber\": \"100301\",\n      \"carrierCode\": \"stamps_com\",\n      \"serviceCode\": \"usps_first_class_mail\",\n      \"packageCode\": \"package\",\n      \"confirmation\": \"delivery\",\n      \"warehouseId\": 16079,\n      \"voided\": false,\n      \"voidDate\": null,\n      \"marketplaceNotified\": true,\n      \"notifyErrorMessage\": null,\n      \"shipTo\": {\n        \"name\": \"Yoda\",\n        \"company\": \"\",\n        \"street1\": \"12223 LOWDEN LN\",\n        \"street2\": \"\",\n        \"street3\": null,\n        \"city\": \"MANCHACA\",\n        \"state\": \"TX\",\n        \"postalCode\": \"78652-3602\",\n        \"country\": \"US\",\n        \"phone\": \"2101235544\",\n        \"residential\": null\n      },\n      \"weight\": {\n        \"value\": 1,\n        \"units\": \"ounces\"\n      },\n      \"dimensions\": null,\n      \"insuranceOptions\": {\n        \"provider\": null,\n        \"insureShipment\": false,\n        \"insuredValue\": 0\n      },\n      \"advancedOptions\": null,\n      \"shipmentItems\": [\n        {\n          \"orderItemId\": 56568665,\n          \"lineItemKey\": null,\n          \"sku\": \"SQ3785739\",\n          \"name\": \"Potato Kitten -\",\n          \"imageUrl\": null,\n          \"weight\": null,\n          \"quantity\": 1,\n          \"unitPrice\": 1,\n          \"warehouseLocation\": null,\n          \"options\": null,\n          \"productId\": 7565777,\n          \"fulfillmentSku\": null\n        }\n      ],\n      \"labelData\": null,\n      \"formData\": null\n    },\n    {\n      \"shipmentId\": 33974373,\n      \"orderId\": 43337328,\n      \"userId\": \"123456AB-ab12-3c4d-5e67-89f1abc1defa\",\n      \"orderNumber\": \"100028\",\n      \"createDate\": \"2014-10-03T06:51:59.9430000\",\n      \"shipDate\": \"2014-10-03\",\n      \"shipmentCost\": 1.93,\n      \"insuranceCost\": 0,\n      \"trackingNumber\": \"9400111899561704681196\",\n      \"isReturnLabel\": false,\n      \"batchNumber\": \"100300\",\n      \"carrierCode\": \"stamps_com\",\n      \"serviceCode\": \"usps_first_class_mail\",\n      \"packageCode\": \"package\",\n      \"confirmation\": \"delivery\",\n      \"warehouseId\": 14265,\n      \"voided\": false,\n      \"voidDate\": null,\n      \"marketplaceNotified\": true,\n      \"notifyErrorMessage\": null,\n      \"shipTo\": {\n        \"name\": \"Luke Skywalker\",\n        \"company\": \"SS\",\n        \"street1\": \"2815 EXPOSITION BLVD\",\n        \"street2\": \"\",\n        \"street3\": null,\n        \"city\": \"AUSTIN\",\n        \"state\": \"TX\",\n        \"postalCode\": \"78703-1221\",\n        \"country\": \"US\",\n        \"phone\": \"\",\n        \"residential\": null\n      },\n      \"weight\": {\n        \"value\": 1,\n        \"units\": \"ounces\"\n      },\n      \"dimensions\": null,\n      \"insuranceOptions\": {\n        \"provider\": null,\n        \"insureShipment\": false,\n        \"insuredValue\": 0\n      },\n      \"advancedOptions\": null,\n      \"shipmentItems\": [\n        {\n          \"orderItemId\": 55827278,\n          \"lineItemKey\": null,\n          \"sku\": \"test\",\n          \"name\": \"test\",\n          \"imageUrl\": null,\n          \"weight\": null,\n          \"quantity\": 1,\n          \"unitPrice\": 1,\n          \"warehouseLocation\": null,\n          \"options\": null,\n          \"productId\": 7541107,\n          \"fulfillmentSku\": null\n        }\n      ],\n      \"labelData\": null,\n      \"formData\": null\n    }\n  ],\n  \"total\": 2,\n  \"page\": 1,\n  \"pages\": 0\n}",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "112",
+        "X-Apiary-Ratelimit-Remaining": "81",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3b1365fbd8119008990d4",
+        "X-Apiary-Transaction-Id": "58f09f5302e7b81900b1fca6",
         "Content-Length": "3551",
-        "Date": "Wed, 15 Feb 2017 01:39:02 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:15 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

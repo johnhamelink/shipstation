@@ -3,7 +3,9 @@
     "request": {
       "body": "{\"trackingNumber\":\"913492493294329421\",\"shipDate\":\"2014-04-01\",\"orderId\":93348442,\"notifySalesChannel\":true,\"notifyCustomer\":true,\"carrierCode\":\"usps\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "106",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a395f7eb5c751900c05c40",
+        "X-Apiary-Transaction-Id": "58f09f4a8abff819003d62ee",
         "Content-Length": "57",
-        "Date": "Tue, 14 Feb 2017 23:42:47 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:06 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

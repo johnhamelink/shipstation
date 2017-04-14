@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"items\":[{\"weight\":{\"value\":24,\"units\":\"ounces\"},\"warehouseLocation\":\"Aisle 1, Bin 7\",\"upc\":\"32-65-98\",\"unitPrice\":99.99,\"taxAmount\":2.5,\"sku\":\"ABC123\",\"shippingAmount\":5,\"quantity\":2,\"productId\":123456,\"orderItemId\":0,\"options\":[{\"value\":\"Large\",\"name\":\"Size\"}],\"name\":\"Test item #1\",\"modifyDate\":null,\"lineItemKey\":\"vd08-MSLbtx\",\"imageUrl\":null,\"fulfillmentSku\":null,\"createDate\":null,\"adjustment\":false},{\"weight\":{\"value\":0,\"units\":\"ounces\"},\"warehouseLocation\":null,\"upc\":null,\"unitPrice\":-20.55,\"taxAmount\":null,\"sku\":\"DISCOUNT CODE\",\"shippingAmount\":null,\"quantity\":1,\"productId\":123456,\"orderItemId\":0,\"options\":[],\"name\":\"10% OFF\",\"modifyDate\":null,\"lineItemKey\":null,\"imageUrl\":null,\"fulfillmentSku\":\"SKU-Discount\",\"createDate\":null,\"adjustment\":true}],\"customerId\":37701499,\"shipByDate\":\"2015-07-05T00:00:00.0000000\",\"amountPaid\":218.73,\"orderNumber\":\"TEST-ORDER-API-DOCS\",\"orderDate\":\"2015-06-29T08:46:27.0000000\",\"customerUsername\":\"headhoncho@whitehouse.gov\",\"externallyFulfilledBy\":null,\"customerEmail\":\"headhoncho@whitehouse.gov\",\"shippingAmount\":10,\"serviceCode\":\"fedex_2day\",\"paymentDate\":\"2015-06-29T08:46:27.0000000\",\"weight\":{\"value\":25,\"units\":\"ounces\"},\"advancedOptions\":{\"warehouseId\":98765,\"storeId\":12345,\"source\":\"Webstore\",\"saturdayDelivery\":false,\"parentId\":null,\"nonMachinable\":false,\"mergedOrSplit\":false,\"mergedIds\":[],\"customField3\":\"https://help.shipstation.com/hc/en-us/articles/206639957\",\"customField2\":\"Per UI settings, this information can appear on some carrier's shipping labels. See link below\",\"customField1\":\"Custom data that you can add to an order. See Custom Field #2 & #3 for more info!\",\"containsAlcohol\":false,\"billToPostalCode\":null,\"billToParty\":null,\"billToCountryCode\":null,\"billToAccount\":null},\"externallyFulfilled\":false,\"giftMessage\":\"Thank you!\",\"orderStatus\":\"awaiting_shipment\",\"shipDate\":\"2015-07-02\",\"orderKey\":\"0f6bec18-3e89-4881-83aa-f392d84f4c74\",\"packageCode\":\"package\",\"userId\":null,\"insuranceOptions\":{\"provider\":\"carrier\",\"insuredValue\":200,\"insureShipment\":true},\"internalNotes\":\"Customer called and would like to upgrade shipping\",\"requestedShippingService\":\"Priority Mail\",\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"billTo\":{\"street3\":null,\"street2\":null,\"street1\":null,\"state\":null,\"residential\":null,\"postalCode\":null,\"phone\":null,\"name\":\"The President\",\"country\":null,\"company\":null,\"city\":null,\"addressVerified\":null},\"paymentMethod\":\"Credit Card\",\"gift\":true,\"tagIds\":null,\"carrierCode\":\"fedex\",\"taxAmount\":5,\"internationalOptions\":{\"nonDelivery\":null,\"customsItems\":null,\"contents\":null},\"shipTo\":{\"street3\":null,\"street2\":\"Oval Office\",\"street1\":\"1600 Pennsylvania Ave\",\"state\":\"DC\",\"residential\":true,\"postalCode\":\"20500\",\"phone\":\"555-555-5555\",\"name\":\"The President\",\"country\":\"US\",\"company\":\"US Govt\",\"city\":\"Washington\",\"addressVerified\":null},\"confirmation\":\"delivery\",\"customerNotes\":\"Thanks for ordering\"}",
+      "body": "{\"weight\":{\"value\":25,\"units\":\"ounces\"},\"taxAmount\":5,\"shippingAmount\":10,\"shipTo\":{\"street2\":\"Oval Office\",\"street1\":\"1600 Pennsylvania Ave\",\"state\":\"DC\",\"residential\":true,\"postalCode\":\"20500\",\"phone\":\"555-555-5555\",\"name\":\"The President\",\"country\":\"US\",\"company\":\"US Govt\",\"city\":\"Washington\"},\"shipDate\":\"2015-07-02\",\"shipByDate\":\"2015-07-05T00:00:00.0000000\",\"serviceCode\":\"fedex_2day\",\"requestedShippingService\":\"Priority Mail\",\"paymentMethod\":\"Credit Card\",\"paymentDate\":\"2015-06-29T08:46:27.0000000\",\"packageCode\":\"package\",\"orderStatus\":\"awaiting_shipment\",\"orderNumber\":\"TEST-ORDER-API-DOCS\",\"orderKey\":\"0f6bec18-3e89-4881-83aa-f392d84f4c74\",\"orderDate\":\"2015-06-29T08:46:27.0000000\",\"items\":[{\"weight\":{\"value\":24,\"units\":\"ounces\"},\"warehouseLocation\":\"Aisle 1, Bin 7\",\"upc\":\"32-65-98\",\"unitPrice\":99.99,\"taxAmount\":2.5,\"sku\":\"ABC123\",\"shippingAmount\":5,\"quantity\":2,\"productId\":123456,\"options\":[{\"value\":\"Large\",\"name\":\"Size\"}],\"name\":\"Test item #1\",\"lineItemKey\":\"vd08-MSLbtx\",\"adjustment\":false}],\"internalNotes\":\"Customer called and would like to upgrade shipping\",\"insuranceOptions\":{\"provider\":\"carrier\",\"insuredValue\":200,\"insureShipment\":true},\"giftMessage\":\"Thank you!\",\"gift\":true,\"externallyFulfilled\":false,\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"customerUsername\":\"headhoncho@whitehouse.gov\",\"customerNotes\":\"Thanks for ordering\",\"customerId\":37701499,\"customerEmail\":\"headhoncho@whitehouse.gov\",\"confirmation\":\"delivery\",\"carrierCode\":\"fedex\",\"billTo\":{\"name\":\"The President\"},\"amountPaid\":218.73}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "117",
+        "X-Apiary-Ratelimit-Remaining": "98",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3770d3d1b1c19007d0b7b",
+        "X-Apiary-Transaction-Id": "58f09f4d8abff819003d62f5",
         "Content-Length": "5320",
-        "Date": "Tue, 14 Feb 2017 21:30:53 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:09 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

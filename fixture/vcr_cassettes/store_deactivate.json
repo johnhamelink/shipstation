@@ -3,7 +3,9 @@
     "request": {
       "body": "{\"storeId\":12345}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "92",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3baf2eb5c751900c07572",
+        "X-Apiary-Transaction-Id": "58f09f4f8abff819003d62fa",
         "Content-Length": "81",
-        "Date": "Wed, 15 Feb 2017 02:20:35 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:11 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

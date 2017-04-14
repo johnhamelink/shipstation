@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/123456789"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/orders/123456789?"
     },
     "response": {
       "body": "{\n      \"orderId\": 94113592,\n      \"orderNumber\": \"TEST-ORDER-API-DOCS\",\n      \"orderKey\": \"0f6bec18-9-4771-83aa-f392d84f4c74\",\n      \"orderDate\": \"2015-06-29T08:46:27.0000000\",\n      \"createDate\": \"2015-07-16T14:00:34.8230000\",\n      \"modifyDate\": \"2015-09-08T11:03:12.3800000\",\n      \"paymentDate\": \"2015-06-29T08:46:27.0000000\",\n      \"shipByDate\": \"2015-07-05T00:00:00.0000000\",\n      \"orderStatus\": \"awaiting_shipment\",\n      \"customerId\": 37701499,\n      \"customerUsername\": \"headhoncho@whitehouse.gov\",\n      \"customerEmail\": \"headhoncho@whitehouse.gov\",\n      \"billTo\": {\n        \"name\": \"The President\",\n        \"company\": null,\n        \"street1\": null,\n        \"street2\": null,\n        \"street3\": null,\n        \"city\": null,\n        \"state\": null,\n        \"postalCode\": null,\n        \"country\": null,\n        \"phone\": null,\n        \"residential\": null,\n        \"addressVerified\": null\n      },\n      \"shipTo\": {\n        \"name\": \"The President\",\n        \"company\": \"US Govt\",\n        \"street1\": \"1600 Pennsylvania Ave\",\n        \"street2\": \"Oval Office\",\n        \"street3\": null,\n        \"city\": \"Washington\",\n        \"state\": \"DC\",\n        \"postalCode\": \"20500\",\n        \"country\": \"US\",\n        \"phone\": \"555-555-5555\",\n        \"residential\": false,\n        \"addressVerified\": \"Address validation warning\"\n      },\n      \"items\": [\n        {\n          \"orderItemId\": 128836912,\n          \"lineItemKey\": \"vd08-MSLbtx\",\n          \"sku\": \"ABC123\",\n          \"name\": \"Test item #1\",\n          \"imageUrl\": null,\n          \"weight\": {\n            \"value\": 24,\n            \"units\": \"ounces\"\n          },\n          \"quantity\": 2,\n          \"unitPrice\": 99.99,\n          \"taxAmount\": null,\n          \"shippingAmount\": null,\n          \"warehouseLocation\": \"Aisle 1, Bin 7\",\n          \"options\": [\n            {\n              \"name\": \"Size\",\n              \"value\": \"Large\"\n            }\n          ],\n          \"productId\": 7239919,\n          \"fulfillmentSku\": null,\n          \"adjustment\": false,\n          \"upc\": null,\n          \"createDate\": \"2015-07-16T14:00:34.823\",\n          \"modifyDate\": \"2015-07-16T14:00:34.823\"\n        },\n        {\n          \"orderItemId\": 128836913,\n          \"lineItemKey\": null,\n          \"sku\": \"DISCOUNT CODE\",\n          \"name\": \"10% OFF\",\n          \"imageUrl\": null,\n          \"weight\": {\n            \"value\": 0,\n            \"units\": \"ounces\"\n          },\n          \"quantity\": 1,\n          \"unitPrice\": -20.55,\n          \"taxAmount\": null,\n          \"shippingAmount\": null,\n          \"warehouseLocation\": null,\n          \"options\": [],\n          \"productId\": null,\n          \"fulfillmentSku\": null,\n          \"adjustment\": true,\n          \"upc\": null,\n          \"createDate\": \"2015-07-16T14:00:34.823\",\n          \"modifyDate\": \"2015-07-16T14:00:34.823\"\n        }\n      ],\n      \"orderTotal\": 194.43,\n      \"amountPaid\": 218.73,\n      \"taxAmount\": 5,\n      \"shippingAmount\": 10,\n      \"customerNotes\": \"Thanks for ordering!\",\n      \"internalNotes\": \"Customer called and would like to upgrade shipping\",\n      \"gift\": true,\n      \"giftMessage\": \"Thank you!\",\n      \"paymentMethod\": \"Credit Card\",\n      \"requestedShippingService\": \"Priority Mail\",\n      \"carrierCode\": \"fedex\",\n      \"serviceCode\": \"fedex_home_delivery\",\n      \"packageCode\": \"package\",\n      \"confirmation\": \"delivery\",\n      \"shipDate\": \"2015-07-02\",\n      \"holdUntilDate\": null,\n      \"weight\": {\n        \"value\": 48,\n        \"units\": \"ounces\"\n      },\n      \"dimensions\": {\n        \"units\": \"inches\",\n        \"length\": 7,\n        \"width\": 5,\n        \"height\": 6\n      },\n      \"insuranceOptions\": {\n        \"provider\": \"carrier\",\n        \"insureShipment\": true,\n        \"insuredValue\": 200\n      },\n      \"internationalOptions\": {\n        \"contents\": null,\n        \"customsItems\": null,\n        \"nonDelivery\": null\n      },\n      \"advancedOptions\": {\n        \"warehouseId\": 24079,\n        \"nonMachinable\": false,\n        \"saturdayDelivery\": false,\n        \"containsAlcohol\": false,\n        \"mergedOrSplit\": false,\n        \"mergedIds\": [],\n        \"parentId\": null,\n        \"storeId\": 26815,\n        \"customField1\": \"Custom data that you can add to an order. See Custom Field #2 & #3 for more info!\",\n        \"customField2\": \"Per UI settings, this information can appear on some carrier's shipping labels. See link below\",\n        \"customField3\": \"https://help.shipstation.com/hc/en-us/articles/206639957\",\n        \"source\": \"Webstore\",\n        \"billToParty\": null,\n        \"billToAccount\": null,\n        \"billToPostalCode\": null,\n        \"billToCountryCode\": null\n      },\n      \"tagIds\": null,\n      \"userId\": null,\n      \"externallyFulfilled\": false,\n      \"externallyFulfilledBy\": null\n    }",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "107",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a25f9db2ddc11900f29b40",
+        "X-Apiary-Transaction-Id": "58f09f4a8ce9c21900bae955",
         "Content-Length": "4696",
-        "Date": "Tue, 14 Feb 2017 01:38:37 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:06 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

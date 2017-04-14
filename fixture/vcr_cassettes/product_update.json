@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"width\":null,\"weightOz\":null,\"warehouseLocation\":null,\"tags\":null,\"sku\":\"\",\"productType\":null,\"productId\":123456789,\"productCategory\":null,\"price\":0,\"noCustoms\":null,\"name\":\"Beautiful\",\"modifyDate\":null,\"length\":null,\"internalNotes\":null,\"height\":null,\"fulfillmentSku\":null,\"defaultServiceCode\":null,\"defaultPackageCode\":null,\"defaultIntlServiceCode\":null,\"defaultIntlPackageCode\":null,\"defaultIntlConfirmation\":null,\"defaultIntlCarrierCode\":null,\"defaultCost\":null,\"defaultConfirmation\":null,\"defaultCarrierCode\":null,\"customsValue\":null,\"customsTariffNo\":null,\"customsDescription\":null,\"customsCountryCode\":null,\"createDate\":null,\"active\":true}",
+      "body": "{\"sku\":\"\",\"productId\":123456789,\"price\":0,\"name\":\"Beautiful\",\"active\":true}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "put",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "76",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3a40121e5d71900a4040b",
+        "X-Apiary-Transaction-Id": "58f09f548abff819003d62fc",
         "Content-Length": "92",
-        "Date": "Wed, 15 Feb 2017 00:42:41 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:16 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

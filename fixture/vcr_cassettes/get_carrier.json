@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{\"carrierCode\":\"stamps_com\"}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/getcarrier"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/carriers/getcarrier?carrierCode=stamps_com"
     },
     "response": {
       "body": "{\n  \"name\": \"Stamps.com\",\n  \"code\": \"stamps_com\",\n  \"accountNumber\": \"SS123\",\n  \"requiresFundedAccount\": true,\n  \"balance\": 24.14\n}",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "117",
+        "X-Apiary-Ratelimit-Remaining": "115",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a256efb2ddc11900f294a0",
+        "X-Apiary-Transaction-Id": "58f09f478abff819003d62e9",
         "Content-Length": "131",
-        "Date": "Tue, 14 Feb 2017 01:01:35 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:03 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":0,\"returnAddress\":null,\"originAddress\":{\"street3\":null,\"street2\":null,\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\",\"addressVerified\":null},\"isDefault\":true,\"createDate\":null}",
+      "body": "{\"warehouseName\":\"API Ship From Location\",\"warehouseId\":0,\"originAddress\":{\"street1\":\"2815 Exposition Blvd\",\"state\":\"TX\",\"residential\":true,\"postalCode\":\"78703\",\"phone\":\"512-555-5555\",\"name\":\"API Warehouse\",\"country\":\"US\",\"company\":\"ShipStation\",\"city\":\"Austin\"},\"isDefault\":true}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "88",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3c11e97de7319008399dd",
+        "X-Apiary-Transaction-Id": "58f09f5102e7b81900b1fca2",
         "Content-Length": "752",
-        "Date": "Wed, 15 Feb 2017 02:46:54 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:13 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

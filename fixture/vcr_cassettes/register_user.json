@@ -3,7 +3,9 @@
     "request": {
       "body": "{\"zip\":\"78703\",\"state\":\"TX\",\"shippingOriginCountryCode\":\"US\",\"phone\":\"5124111234\",\"password\":\"testpw1234\",\"lastName\":\"Smith\",\"firstName\":\"John\",\"email\":\"jsmithtest@gmail.com\",\"countryCode\":\"US\",\"companyName\":\"Droid Repair LLC\",\"city\":\"Austin\",\"addr2\":\"\",\"addr1\":\"542 Midichlorian Rd.\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "114",
+        "X-Apiary-Ratelimit-Remaining": "74",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a25679085e9c19000586a3",
+        "X-Apiary-Transaction-Id": "58f09f5529fc64190060b12a",
         "Content-Length": "187",
-        "Date": "Tue, 14 Feb 2017 00:59:37 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:17 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

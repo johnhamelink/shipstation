@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"target_url\":\"http://someexamplewebhookurl.com/neworder\",\"store_id\":null,\"friendly_name\":\"My Webhook\",\"event\":\"ORDER_NOTIFY\"}",
+      "body": "{\"target_url\":\"http://someexamplewebhookurl.com/neworder\",\"friendly_name\":\"My Webhook\",\"event\":\"ORDER_NOTIFY\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "86",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3c43997de731900839bcf",
+        "X-Apiary-Transaction-Id": "58f09f518ce9c21900bae960",
         "Content-Length": "20",
-        "Date": "Wed, 15 Feb 2017 03:00:09 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:13 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

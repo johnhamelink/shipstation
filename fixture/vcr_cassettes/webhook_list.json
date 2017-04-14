@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/webhooks"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/webhooks?"
     },
     "response": {
       "body": "{\n    \"webhooks\": [\n        {\n            \"IsLabelAPIHook\": false,\n            \"WebHookID\": 123,\n            \"SellerID\": 100000,\n            \"StoreID\": 12345,\n            \"HookType\": \"ITEM_ORDER_NOTIFY\",\n            \"MessageFormat\": \"Json\",\n            \"Url\": \"http://example.endpoint/orders\",\n            \"Name\": \"My Order Webhook\",\n            \"BulkCopyBatchID\": null,\n            \"BulkCopyRecordID\": null,\n            \"Active\": true,\n            \"WebhookLogs\": [],\n            \"Seller\": null,\n            \"Store\": null\n        },\n        {\n            \"IsLabelAPIHook\": false,\n            \"WebHookID\": 456,\n            \"SellerID\": 100000,\n            \"StoreID\": 98765,\n            \"HookType\": \"SHIP_NOTIFY\",\n            \"MessageFormat\": \"Json\",\n            \"Url\": \"https://example.endpoint/shipment\",\n            \"Name\": \"My Shipment Webhook\",\n            \"BulkCopyBatchID\": null,\n            \"BulkCopyRecordID\": null,\n            \"Active\": true,\n            \"WebhookLogs\": [],\n            \"Seller\": null,\n            \"Store\": null\n        }\n    ]\n}",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "118",
+        "X-Apiary-Ratelimit-Remaining": "85",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3c43921e5d71900a41928",
+        "X-Apiary-Transaction-Id": "58f09f5202e7b81900b1fca3",
         "Content-Length": "1052",
-        "Date": "Wed, 15 Feb 2017 03:00:09 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:14 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

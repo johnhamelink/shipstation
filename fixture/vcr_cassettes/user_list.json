@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{\"showInactive\":false}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/users"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/users?showInactive=false"
     },
     "response": {
       "body": "{\n  \"userId\": \"123456AB-ab12-3c4d-5e67-89f1abc1defa\",\n  \"userName\": \"SS-user1\",\n  \"name\": \"Shipping Employee 1\"\n}",
@@ -16,15 +18,15 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "83",
         "Content-Type": "application/json",
         "Authorization": "< Enter your Basic Authorization string here >",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3bc0997de731900839702",
+        "X-Apiary-Transaction-Id": "58f09f5202e7b81900b1fca4",
         "Content-Length": "113",
-        "Date": "Wed, 15 Feb 2017 02:25:13 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:14 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

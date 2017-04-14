@@ -3,7 +3,9 @@
     "request": {
       "body": "{}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "delete",
       "options": [],
@@ -16,13 +18,13 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "102",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a2606f67fc911900b81c2e",
+        "X-Apiary-Transaction-Id": "58f09f4c8ce9c21900bae95a",
         "Content-Length": "79",
-        "Date": "Tue, 14 Feb 2017 01:42:07 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:08 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

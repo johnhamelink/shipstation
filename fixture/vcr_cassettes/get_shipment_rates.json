@@ -1,9 +1,11 @@
 [
   {
     "request": {
-      "body": "{\"weight\":{\"value\":3,\"units\":\"ounces\"},\"toState\":\"DC\",\"toPostalCode\":\"20500\",\"toCountry\":\"US\",\"toCity\":\"Washington\",\"serviceCode\":null,\"residential\":false,\"packageCode\":null,\"fromPostalCode\":\"78703\",\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"confirmation\":\"delivery\",\"carrierCode\":\"fedex\"}",
+      "body": "{\"weight\":{\"value\":3,\"units\":\"ounces\"},\"toState\":\"DC\",\"toPostalCode\":\"20500\",\"toCountry\":\"US\",\"toCity\":\"Washington\",\"residential\":false,\"fromPostalCode\":\"78703\",\"dimensions\":{\"width\":5,\"units\":\"inches\",\"length\":7,\"height\":6},\"confirmation\":\"delivery\",\"carrierCode\":\"fedex\"}",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "post",
       "options": [],
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "104",
+        "X-Apiary-Ratelimit-Remaining": "82",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3b15921e5d71900a40d62",
+        "X-Apiary-Transaction-Id": "58f09f53e748fa19003cd3fa",
         "Content-Length": "1017",
-        "Date": "Wed, 15 Feb 2017 01:39:37 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:15 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/products"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/products?"
     },
     "response": {
       "body": "    {  \n       \"products\":[  \n          {  \n             \"productId\":7854008,\n             \"sku\":\"1004\",\n             \"name\":\"Coffee Mug\",\n             \"price\":26,\n             \"defaultCost\":0,\n             \"length\":3,\n             \"width\":3,\n             \"height\":3,\n             \"weightOz\":26,\n             \"internalNotes\":null,\n             \"fulfillmentSku\":\"F1004\",\n             \"createDate\":\"2014-09-04T09:18:01.293\",\n             \"modifyDate\":\"2014-09-18T12:38:43.893\",\n             \"active\":true,\n             \"productCategory\":{  \n                \"categoryId\":9999,\n                \"name\":\"Door Closers\"\n             },\n             \"productType\":null,\n             \"warehouseLocation\":\"Bin 22\",\n             \"defaultCarrierCode\":\"fedex\",\n             \"defaultServiceCode\":\"fedex_home_delivery\",\n             \"defaultPackageCode\":\"package\",\n             \"defaultIntlCarrierCode\":\"ups\",\n             \"defaultIntlServiceCode\":\"ups_worldwide_saver\",\n             \"defaultIntlPackageCode\":\"package\",\n             \"defaultConfirmation\":\"direct_signature\",\n             \"defaultIntlConfirmation\":\"adult_signature\",\n             \"customsDescription\":null,\n             \"customsValue\":null,\n             \"customsTariffNo\":null,\n             \"customsCountryCode\":null,\n             \"noCustoms\":null,\n             \"tags\":[  \n                {  \n                   \"tagId\":9180,\n                   \"name\":\"APItest\"\n                }\n             ]\n          },\n          {  \n             \"productId\":7984482,\n             \"sku\":\"FirstSKU\",\n             \"name\":\"Product Name 123\",\n             \"price\":10,\n             \"defaultCost\":null,\n             \"length\":2,\n             \"width\":3,\n             \"height\":4,\n             \"weightOz\":96,\n             \"internalNotes\":null,\n             \"fulfillmentSku\":\"fSkuFill\",\n             \"createDate\":\"2014-09-18T08:17:28.647\",\n             \"modifyDate\":\"2014-09-18T12:32:40.257\",\n             \"active\":true,\n             \"productCategory\":{  \n                \"categoryId\":9690,\n                \"name\":\"Floor Matting\"\n             },\n             \"productType\":null,\n             \"warehouseLocation\":\"Bin 100\",\n             \"defaultCarrierCode\":\"ups\",\n             \"defaultServiceCode\":\"ups_ground\",\n             \"defaultPackageCode\":\"package\",\n             \"defaultIntlCarrierCode\":null,\n             \"defaultIntlServiceCode\":null,\n             \"defaultIntlPackageCode\":\"package\",\n             \"defaultConfirmation\":\"delivery\",\n             \"defaultIntlConfirmation\":null,\n             \"customsDescription\":\"customs declaration\",\n             \"customsValue\":100,\n             \"customsTariffNo\":\"1234567\",\n             \"customsCountryCode\":\"US\",\n             \"noCustoms\":null,\n             \"tags\":[  \n                {  \n                   \"tagId\":9180,\n                   \"name\":\"APItest\"\n                }\n             ]\n          }\n       ],\n       \"total\":2,\n       \"page\":1,\n       \"pages\":0\n    }",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "119",
+        "X-Apiary-Ratelimit-Remaining": "77",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a3a2bfcc0da71900576a30",
+        "X-Apiary-Transaction-Id": "58f09f54e748fa19003cd3fe",
         "Content-Length": "2941",
-        "Date": "Wed, 15 Feb 2017 00:37:19 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:16 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,

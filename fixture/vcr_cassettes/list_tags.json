@@ -1,14 +1,16 @@
 [
   {
     "request": {
-      "body": "{}",
+      "body": "",
       "headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "shipstation-elixir-client/0.3.6"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/accounts/listtags"
+      "url": "https://private-anon-ab6eb750a3-shipstation.apiary-mock.com/accounts/listtags?"
     },
     "response": {
       "body": "[\n    {\n        \"tagId\": 8362,\n        \"name\": \"Backorder\",\n        \"color\": \"#800080\"\n    },\n    {\n        \"tagId\": 8324,\n        \"name\": \"Canada\",\n        \"color\": \"#ff0000\"\n    },\n    {\n        \"tagId\": 8336,\n        \"name\": \"Fragile\",\n        \"color\": \"#33CCCC\"\n    },\n    {\n        \"tagId\": 8221,\n        \"name\": \"Repeat Buyer\",\n        \"color\": \"#CC99FF\"\n    }\n]",
@@ -16,14 +18,14 @@
         "Server": "Cowboy",
         "Connection": "keep-alive",
         "X-Apiary-Ratelimit-Limit": "120",
-        "X-Apiary-Ratelimit-Remaining": "113",
+        "X-Apiary-Ratelimit-Remaining": "73",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT",
         "Access-Control-Max-Age": "10",
-        "X-Apiary-Transaction-Id": "58a2567aa3da641900321517",
+        "X-Apiary-Transaction-Id": "58f09f558abff819003d62fd",
         "Content-Length": "368",
-        "Date": "Tue, 14 Feb 2017 00:59:38 GMT",
+        "Date": "Fri, 14 Apr 2017 10:07:17 GMT",
         "Via": "1.1 vegur"
       },
       "status_code": 200,
